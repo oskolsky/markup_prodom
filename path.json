@@ -1,0 +1,62 @@
+{
+  "build": "build",
+  "layouts": {
+    "all": "**/*.haml",
+    "views": {
+      "all": "views/**/*.haml",
+      "none": "!views/**/*.haml"
+    }
+  },
+  "stylesheets": {
+    "all": "assets/stylesheets/**/*.scss",
+    "app": "assets/stylesheets/application.scss",
+    "dest": "build/assets/stylesheets",
+    "vendor": {
+      "all": "assets/stylesheets/vendor/**/*",
+      "dest": "build/assets/stylesheets/vendor"
+    }
+  },
+  "javascripts": {
+    "all": "assets/javascripts/**/*.js",
+    "app": "assets/javascripts/application.js",
+    "list": [
+      "assets/javascripts/vendor/modernizr-latest.js",
+      "assets/javascripts/vendor/jquery-2.1.1.js",
+      "assets/javascripts/vendor/jquery-ui.js",
+      "assets/javascripts/vendor/underscore.js",
+      "assets/javascripts/vendor/backbone.js",
+      "assets/javascripts/vendor/selectordie.js",
+      "assets/javascripts/vendor/accounting.js",
+      "assets/javascripts/vendor/jquery.arcticmodal.js",
+      "assets/javascripts/vendor/owl.carousel.js",
+      "assets/javascripts/vendor/imagesloaded.pkgd.js",
+      "assets/javascripts/vendor/masonry.pkgd.js",
+      "assets/javascripts/config.js",
+      "assets/javascripts/jquery.extensions.js",
+      "assets/javascripts/helpers.js",
+      "assets/javascripts/forms.js",
+      "assets/javascripts/application.js",
+      "assets/javascripts/project.js"
+    ],
+    "dest": "build/assets/javascripts",
+    "vendor": {
+      "none": "!assets/javascripts/vendor/**/*.js"
+    }
+  },
+  "images": {
+    "all": "assets/images/**/*",
+    "dest": "build/assets/images"
+  },
+  "fonts": {
+    "all": "assets/fonts/**/*",
+    "dest": "build/assets/fonts"
+  },
+  "files": {
+    "list": [
+      "favicon.ico",
+      "apple-touch-icon.png",
+      "humans.txt",
+      "robots.txt"
+    ]
+  }
+}

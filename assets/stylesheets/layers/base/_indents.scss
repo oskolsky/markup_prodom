@@ -1,0 +1,6 @@
+@for $i from 0 through 20 {
+  .mt-#{$i} {margin-top:     #{$i}rem !important;}
+  .mb-#{$i} {margin-bottom:  #{$i}rem !important;}
+  .pt-#{$i} {padding-top:    #{$i}rem !important;}
+  .pb-#{$i} {padding-bottom: #{$i}rem !important;}
+}

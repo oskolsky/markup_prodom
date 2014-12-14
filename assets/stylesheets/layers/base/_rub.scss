@@ -1,0 +1,284 @@
+@if $rub == true {
+  //
+  // .. Arial
+  //
+  @if $rub-font == "all" or $rub-font == "arial" {
+    @font-face {
+      font-family: "ALSRubl-Arial";
+      src: font-url("rub/arial/alsrubl-arial-regular.eot");
+      src: font-url("rub/arial/alsrubl-arial-regular.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/arial/alsrubl-arial-regular.woff") format("woff"),
+           font-url("rub/arial/alsrubl-arial-regular.ttf") format("truetype"),
+           font-url("rub/arial/alsrubl-arial-regular.svg#ALSRublArialRegular") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "ALSRubl-Arial";
+      src: font-url("rub/arial/alsrubl-arial-italic.eot");
+      src: font-url("rub/arial/alsrubl-arial-italic.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/arial/alsrubl-arial-italic.woff") format("woff"),
+           font-url("rub/arial/alsrubl-arial-italic.ttf") format("truetype"),
+           font-url("rub/arial/alsrubl-arial-italic.svg#ALSRublArialItalic") format("svg");
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "ALSRubl-Arial";
+      src: font-url("rub/arial/alsrubl-arial-bold.eot");
+      src: font-url("rub/arial/alsrubl-arial-bold.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/arial/alsrubl-arial-bold.woff") format("woff"),
+           font-url("rub/arial/alsrubl-arial-bold.ttf") format("truetype"),
+           font-url("rub/arial/alsrubl-arial-bold.svg#ALSRublArialBold") format("svg");
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "ALSRubl-Arial";
+      src: font-url("rub/arial/alsrubl-arial-bolditalic.eot");
+      src: font-url("rub/arial/alsrubl-arial-bolditalic.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/arial/alsrubl-arial-bolditalic.woff") format("woff"),
+           font-url("rub/arial/alsrubl-arial-bolditalic.ttf") format("truetype"),
+           font-url("rub/arial/alsrubl-arial-bolditalic.svg#ALSRublArialBoldItalic") format("svg");
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+
+  //
+  // .. Georgia
+  //
+  @if $rub-font == "all" or $rub-font == "georgia" {
+    @font-face {
+      font-family: "ALSRubl-Georgia";
+      src: font-url("rub/georgia/alsrubl-georgia-regular.eot");
+      src: font-url("rub/georgia/alsrubl-georgia-regular.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/georgia/alsrubl-georgia-regular.woff") format("woff"),
+           font-url("rub/georgia/alsrubl-georgia-regular.ttf") format("truetype"),
+           font-url("rub/georgia/alsrubl-georgia-regular.svg#ALSRublGeorgiaRegular") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "ALSRubl-Georgia";
+      src: font-url("rub/georgia/alsrubl-georgia-italic.eot");
+      src: font-url("rub/georgia/alsrubl-georgia-italic.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/georgia/alsrubl-georgia-italic.woff") format("woff"),
+           font-url("rub/georgia/alsrubl-georgia-italic.ttf") format("truetype"),
+           font-url("rub/georgia/alsrubl-georgia-italic.svg#ALSRublGeorgiaItalic") format("svg");
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "ALSRubl-Georgia";
+      src: font-url("rub/georgia/alsrubl-georgia-bold.eot");
+      src: font-url("rub/georgia/alsrubl-georgia-bold.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/georgia/alsrubl-georgia-bold.woff") format("woff"),
+           font-url("rub/georgia/alsrubl-georgia-bold.ttf") format("truetype"),
+           font-url("rub/georgia/alsrubl-georgia-bold.svg#ALSRublGeorgiaBold") format("svg");
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "ALSRubl-Georgia";
+      src: font-url("rub/georgia/alsrubl-georgia-bolditalic.eot");
+      src: font-url("rub/georgia/alsrubl-georgia-bolditalic.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/georgia/alsrubl-georgia-bolditalic.woff") format("woff"),
+           font-url("rub/georgia/alsrubl-georgia-bolditalic.ttf") format("truetype"),
+           font-url("rub/georgia/alsrubl-georgia-bolditalic.svg#ALSRublGeorgiaBoldItalic") format("svg");
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+
+  //
+  // .. Tahoma
+  //
+  @if $rub-font == "all" or $rub-font == "tahoma" {
+    @font-face {
+      font-family: "ALSRubl-Tahoma";
+      src: font-url("rub/tahoma/alsrubl-tahoma-regular.eot");
+      src: font-url("rub/tahoma/alsrubl-tahoma-regular.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/tahoma/alsrubl-tahoma-regular.woff") format("woff"),
+           font-url("rub/tahoma/alsrubl-tahoma-regular.ttf") format("truetype"),
+           font-url("rub/tahoma/alsrubl-tahoma-regular.svg#ALSRublTahomaItalic") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "ALSRubl-Tahoma";
+      src: font-url("rub/tahoma/alsrubl-tahoma-bold.eot");
+      src: font-url("rub/tahoma/alsrubl-tahoma-bold.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/tahoma/alsrubl-tahoma-bold.woff") format("woff"),
+           font-url("rub/tahoma/alsrubl-tahoma-bold.ttf") format("truetype"),
+           font-url("rub/tahoma/alsrubl-tahoma-bold.svg#ALSRublTahomaItalic") format("svg");
+      font-weight: bold;
+      font-style: normal;
+    }
+  }
+
+  //
+  // .. Times
+  //
+  @if $rub-font == "all" or $rub-font == "times" {
+    @font-face {
+      font-family: "ALSRubl-Times";
+      src: font-url("rub/times/alsrubl-times-regular.eot");
+      src: font-url("rub/times/alsrubl-times-regular.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/times/alsrubl-times-regular.woff") format("woff"),
+           font-url("rub/times/alsrubl-times-regular.ttf") format("truetype"),
+           font-url("rub/times/alsrubl-times-regular.svg#ALSRublTimesItalic") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "ALSRubl-Times";
+      src: font-url("rub/times/alsrubl-times-italic.eot");
+      src: font-url("rub/times/alsrubl-times-italic.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/times/alsrubl-times-italic.woff") format("woff"),
+           font-url("rub/times/alsrubl-times-italic.ttf") format("truetype"),
+           font-url("rub/times/alsrubl-times-italic.svg#ALSRublTimesItalic") format("svg");
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "ALSRubl-Times";
+      src: font-url("rub/times/alsrubl-times-bold.eot");
+      src: font-url("rub/times/alsrubl-times-bold.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/times/alsrubl-times-bold.woff") format("woff"),
+           font-url("rub/times/alsrubl-times-bold.ttf") format("truetype"),
+           font-url("rub/times/alsrubl-times-bold.svg#ALSRublTimesItalic") format("svg");
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "ALSRubl-Times";
+      src: font-url("rub/times/alsrubl-times-bolditalic.eot");
+      src: font-url("rub/times/alsrubl-times-bolditalic.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/times/alsrubl-times-bolditalic.woff") format("woff"),
+           font-url("rub/times/alsrubl-times-bolditalic.ttf") format("truetype"),
+           font-url("rub/times/alsrubl-times-bolditalic.svg#ALSRublTimesItalic") format("svg");
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+
+  //
+  // .. Verdana
+  //
+  @if $rub-font == "all" or $rub-font == "verdana" {
+    @font-face {
+      font-family: "ALSRubl-Verdana";
+      src: font-url("rub/verdana/alsrubl-verdana-regular.eot");
+      src: font-url("rub/verdana/alsrubl-verdana-regular.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/verdana/alsrubl-verdana-regular.woff") format("woff"),
+           font-url("rub/verdana/alsrubl-verdana-regular.ttf") format("truetype"),
+           font-url("rub/verdana/alsrubl-verdana-regular.svg#ALSRublRegular") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "ALSRubl-Verdana";
+      src: font-url("rub/verdana/alsrubl-verdana-italic.eot");
+      src: font-url("rub/verdana/alsrubl-verdana-italic.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/verdana/alsrubl-verdana-italic.woff") format("woff"),
+           font-url("rub/verdana/alsrubl-verdana-italic.ttf") format("truetype"),
+           font-url("rub/verdana/alsrubl-verdana-italic.svg#ALSRublItalic") format("svg");
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: "ALSRubl-Verdana";
+      src: font-url("rub/verdana/alsrubl-verdana-bold.eot");
+      src: font-url("rub/verdana/alsrubl-verdana-bold.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/verdana/alsrubl-verdana-bold.woff") format("woff"),
+           font-url("rub/verdana/alsrubl-verdana-bold.ttf") format("truetype"),
+           font-url("rub/verdana/alsrubl-verdana-bold.svg#ALSRublBold") format("svg");
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "ALSRubl-Verdana";
+      src: font-url("rub/verdana/alsrubl-verdana-bolditalic.eot");
+      src: font-url("rub/verdana/alsrubl-verdana-bolditalic.eot?#iefix") format("embedded-opentype"),
+           font-url("rub/verdana/alsrubl-verdana-bolditalic.woff") format("woff"),
+           font-url("rub/verdana/alsrubl-verdana-bolditalic.ttf") format("truetype"),
+           font-url("rub/verdana/alsrubl-verdana-bolditalic.svg#ALSRublBoldItalic") format("svg");
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+
+
+
+  //****************************************************************************************************
+  //
+  // .. STYLES
+  //
+  //****************************************************************************************************
+  @include class(rub) {line-height: normal;}
+
+  //
+  // .. All
+  //
+  @if $rub-font == "all" {
+    @include class(rub__arial)   {font-family: "ALSRubl-Arial", Arial, sans-serif;}
+    @include class(rub__georgia) {font-family: "ALSRubl-Georgia", Georgia, serif;}
+    @include class(rub__tahoma)  {font-family: "ALSRubl-Tahoma", Tahoma, sans-serif;}
+    @include class(rub__times)   {font-family: "ALSRubl-Times", "Times New Roman", Times, serif;}
+    @include class(rub__verdana) {font-family: "ALSRubl-Verdana", Verdana, sans-serif;}
+    .format-money__arial   > .rub {@extend %rub__arial;}
+    .format-money__georgia > .rub {@extend %rub__georgia;}
+    .format-money__tahoma  > .rub {@extend %rub__tahoma;}
+    .format-money__times   > .rub {@extend %rub__times;}
+    .format-money__verdana > .rub {@extend %rub__verdana;}
+  }
+
+  //
+  // .. Arial
+  //
+  @if $rub-font == "arial" {
+    @include class(rub) {font-family: "ALSRubl-Arial", Arial, sans-serif;}
+  }
+
+  //
+  // .. Georgia
+  //
+  @if $rub-font == "georgia" {
+    @include class(rub) {font-family: "ALSRubl-Georgia", Georgia, serif;}
+  }
+
+  //
+  // .. Tahoma
+  //
+  @if $rub-font == "tahoma" {
+    @include class(rub) {font-family: "ALSRubl-Tahoma", Tahoma, sans-serif;}
+  }
+
+  //
+  // .. Times
+  //
+  @if $rub-font == "times" {
+    @include class(rub) {font-family: "ALSRubl-Times", "Times New Roman", Times, serif;}
+  }
+
+  //
+  // .. Verdana
+  //
+  @if $rub-font == "verdana" {
+    @include class(rub) {font-family: "ALSRubl-Verdana", Verdana, sans-serif;}
+  }
+}

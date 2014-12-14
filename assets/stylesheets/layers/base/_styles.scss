@@ -1,0 +1,121 @@
+html {height: 100%;}
+
+img {
+  max-width: 100%;
+  &[width],
+  &[height] {max-width: none;}
+}
+
+th, td {@include prefixes(box-sizing, border-box);}
+
+
+
+//****************************************************************************************************
+//
+// .. PROPERTIES
+//
+//****************************************************************************************************
+//
+// .. Float
+//
+.f-l {float: left;}
+.f-r {float: right;}
+
+//
+// .. Overflow
+//
+.o-h  {overflow: hidden;}
+.ox-h {@include prefixes(overflow-x, hidden);}
+.oy-h {@include prefixes(overflow-y, hidden);}
+
+//
+// .. Position
+//
+.p-r {position: relative;}
+
+//
+// .. Visibility
+//
+.v-hidden  {visibility: hidden;}
+.v-visible {visibility: visible;}
+
+//
+// .. White-space
+//
+.nowrap {white-space: nowrap;}
+
+
+
+//****************************************************************************************************
+//
+// .. HELPERS
+//
+//****************************************************************************************************
+//
+// .. Center
+//
+@include class(b-center) {
+  display: block !important;
+  margin-right: auto !important;
+  margin-left:  auto !important;
+}
+
+//
+// .. Clearfix
+//
+@include class(cf) {
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+//
+// .. Container
+//
+@include class(ctn) {
+  display: block;
+  margin-right: auto;
+  margin-left:  auto;
+  padding-right: $ctn-padding;
+  padding-left:  $ctn-padding;
+  @if $grid == "fixed" {width: #{$ctn-fixed-width};}
+  @if $grid == "fluid" {
+    min-width: $ctn-fluid-min-width;
+    max-width: $ctn-fluid-max-width;
+  }
+  @if $grid == "responsive" {
+    @include mq(phone) {
+      min-width: nth($ctn-responsive-min-width-list, 1);
+      max-width: nth($ctn-responsive-max-width-list, 1);
+    }
+    @include mq(tablet) {
+      min-width: nth($ctn-responsive-min-width-list, 2);
+      max-width: nth($ctn-responsive-max-width-list, 2);
+    }
+    @include mq(desktop) {
+      min-width: nth($ctn-responsive-min-width-list, 3);
+      max-width: nth($ctn-responsive-max-width-list, 3);
+    }
+    @include prefixes(box-sizing, border-box);
+  }
+}
+
+@if $grid == "responsive" {
+  @include mq(phone) {
+    .hidden-phone,
+    .visible-tablet,
+    .visible-desktop {display: none !important;}
+  }
+  @include mq(tablet) {
+    .visible-phone,
+    .hidden-tablet,
+    .visible-desktop {display: none !important;}
+  }
+  @include mq(desktop) {
+    .visible-phone,
+    .visible-tablet,
+    .hidden-desktop {display: none !important;}
+  }
+}

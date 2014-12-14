@@ -1,0 +1,17 @@
+:css
+  .alert-js{display:none;padding:2rem 0;background:#b22222;color:#fff;text-align:center}.alert-js p{font-size:2rem;line-height:1.5}.no-js .alert-js{display:block}
+
+.alert-js{role: 'alert'}
+  %p> У вас отключен JavaScript.
+
+/ [if lt IE 9]
+  :css
+    .alert-ie{padding:20px 0;background:#4682b4;color:#fff;text-align:center}.alert-ie p{font-size:20px;line-height:1.5}.alert-ie a{color:#fff;text-decoration:underline}.alert-ie a:hover{text-decoration:none}
+
+  .alert-ie{role: 'alert'}
+    %p>
+      Использование устаревшего браузера
+      %br>
+      повышает риск взлома вашего компьютера.
+      %br>
+      %a{href: 'http://browsehappy.com/', rel: 'nofollow', target: '_blank'}> Обновите свой браузер!

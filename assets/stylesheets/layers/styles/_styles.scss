@@ -1,0 +1,227 @@
+@mixin body($list) {
+  body {
+    font-size: nth($base-font-size-list, $list);
+    line-height: nth($base-line-height-list, $list);
+  }
+}
+
+@mixin headers($list) {
+  @include class(alpha) {
+    font: {
+      family: $h-font-family;
+      size: nth($h1-font-size-list, $list); 
+      weight: nth($h1-font-weight-list, $list);
+    }
+    line-height: nth($h1-line-height-list, $list);
+  }
+  @include class(beta) {
+    font: {
+      family: $h-font-family;
+      size: nth($h2-font-size-list, $list);
+      weight: nth($h2-font-weight-list, $list);
+    }
+    line-height: nth($h2-line-height-list, $list);
+  }
+  @include class(gamma) {
+    font: {
+      family: $h-font-family;
+      size: nth($h3-font-size-list, $list);
+      weight: nth($h3-font-weight-list, $list);
+    }
+    line-height: nth($h3-line-height-list, $list);
+  }
+  @include class(delta) {
+    font: {
+      family: $h-font-family;
+      size: nth($h4-font-size-list, $list);
+      weight: nth($h4-font-weight-list, $list);
+    }
+    line-height: nth($h4-line-height-list, $list);
+  }
+  @include class(epsilon) {
+    font: {
+      family: $h-font-family;
+      size: nth($h5-font-size-list, $list);
+      weight: nth($h5-font-weight-list, $list);
+    }
+    line-height: nth($h5-line-height-list, $list);
+  }
+  @include class(zeta) {
+    font: {
+      family: $h-font-family;
+      size: nth($h6-font-size-list, $list);
+      weight: nth($h6-font-weight-list, $list);
+    }
+    line-height: nth($h6-line-height-list, $list);
+  }
+}
+
+
+
+//****************************************************************************************************
+//
+// .. STYLES
+//
+//****************************************************************************************************
+html {
+  @if $grid == "fixed" or $grid == "fluid" {font-size: nth($root-font-size-list, 3);}
+  @if $grid == "responsive" {
+    @include mq(phone)   {font-size: nth($root-font-size-list, 1);}
+    @include mq(tablet)  {font-size: nth($root-font-size-list, 2);}
+    @include mq(desktop) {font-size: nth($root-font-size-list, 3);}
+  }
+}
+
+body {
+  background-color: $base-bg;
+  color: $base-color;
+  font: {
+    weight: $base-font-weight;
+    family: $base-font-family;
+  }
+  @if $grid == "fixed" {min-width: $ctn-fixed-width + $ctn-padding * 2;}
+  @if $grid == "fluid" {min-width: $ctn-fluid-min-width + $ctn-padding * 2;}
+  @if $grid == "responsive" {
+    @include mq(phone)   {min-width: nth($ctn-responsive-min-width-list, 1);}
+    @include mq(tablet)  {min-width: nth($ctn-responsive-min-width-list, 2);}
+    @include mq(desktop) {min-width: nth($ctn-responsive-min-width-list, 3);}
+  }
+}
+
+@if $grid == "fixed" or $grid == "fluid" {@include body(3);}
+@if $grid == "responsive" {
+  @include mq(phone)   {@include body(1);}
+  @include mq(tablet)  {@include body(2);}
+  @include mq(desktop) {@include body(3);}
+}
+
+img {font-style: italic;}
+
+
+
+//****************************************************************************************************
+//
+// .. HEADERS
+//
+//****************************************************************************************************
+@if $grid == "fixed" or $grid == "fluid" {@include headers(3);}
+@if $grid == "responsive" {
+  @include mq(phone)   {@include headers(1);}
+  @include mq(tablet)  {@include headers(2);}
+  @include mq(desktop) {@include headers(3);}
+}
+
+h1 {@extend %alpha;}
+h2 {@extend %beta;}
+h3 {@extend %gamma;}
+h4 {@extend %delta;}
+h5 {@extend %epsilon;}
+h6 {@extend %zeta;}
+
+
+
+//****************************************************************************************************
+//
+// .. PROPERTIES
+//
+//****************************************************************************************************
+//
+// .. Cursors
+//
+.c-d {cursor: default;}
+.c-p {cursor: pointer;}
+
+//
+// .. Vertical-align
+//
+.va-bl {vertical-align: baseline;}
+.va-t  {vertical-align: top;}
+.va-m  {vertical-align: middle;}
+.va-b  {vertical-align: bottom;}
+
+
+
+//****************************************************************************************************
+//
+// .. HELPERS
+//
+//****************************************************************************************************
+//
+// .. Background
+//
+.bg-major {background-color: $major-color;}
+.bg-minor {background-color: $minor-color;}
+.bg-voice {background-color: $voice-color;}
+.bg-muted {background-color: $muted-color;}
+
+//
+// .. Currency
+//
+.format-money {white-space: nowrap;}
+
+//
+// .. Numbered list
+//
+.numbered {list-style: decimal outside;}
+
+//
+// .. Round
+//
+.round {border-radius: 50%;}
+
+//
+// .. Text
+//
+@include class(tx-xxs) {
+  font-size: $tx-xxs-font-size;
+  line-height: $tx-xxs-line-height;
+}
+@include class(tx-xs) {
+  font-size: $tx-xs-font-size;
+  line-height: $tx-xs-line-height;
+}
+@include class(tx-s) {
+  font-size: $tx-s-font-size;
+  line-height: $tx-s-line-height;
+}
+@include class(tx-l) {
+  font-size: $tx-l-font-size;
+  line-height: $tx-l-line-height;
+}
+@include class(tx-xl) {
+  font-size: $tx-xl-font-size;
+  line-height: $tx-xl-line-height;
+}
+@include class(tx-xxl) {
+  font-size: $tx-xxl-font-size;
+  line-height: $tx-xxl-line-height;
+}
+
+.tx-i {font-style: italic;}
+
+@for $i from 1 through 9 {
+  $i: $i * 100;
+  .tx-#{$i} {font-weight: $i;}
+}
+
+.tx-major {color: $major-color;}
+.tx-minor {color: $minor-color;}
+.tx-voice {color: $voice-color;}
+.tx-muted {color: $muted-color;}
+
+.tx-left   {text-align: left;}
+.tx-center {text-align: center;}
+.tx-right  {text-align: right;}
+
+.tx-cap   {text-transform: capitalize;}
+.tx-lower {text-transform: lowercase;}
+.tx-upper {text-transform: uppercase;}
+
+
+
+//****************************************************************************************************
+//
+// .. SILENT
+//
+//****************************************************************************************************
+%focus-style {box-shadow: 0 0 .1rem .1rem rgba(41,128,185,.66) !important;}

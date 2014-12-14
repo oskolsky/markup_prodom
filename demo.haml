@@ -1,0 +1,34 @@
+!!!
+%html.no-js{lang: 'ru-RU'}
+  %head
+    %title Chemistry Template
+    = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
+    :css
+      .demo{margin-left:6rem}.demo li:not(:last-child){margin-bottom:1rem}.demo ol{counter-reset:list}.demo ol li{position:relative}.demo ol li::before{counter-increment:list;content:counter(list)'.';position:absolute;top:0;right:100%;margin-right:.5rem;color:#ccc}
+  
+  %body#page.page
+    = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
+
+    %main#main.main{role: 'main'}
+      %section{role: 'region', aria: {label: 'Demo'}}
+        .pt-8.pb-8
+          .ctn
+            %article
+              %header.mb-4
+                %h1
+                  %a{href: 'index.html'}
+                    %i.fa.fa-flask
+                    Chemistry Template
+
+              %nav.demo
+                %ol
+                  %li 
+                    %a{href: 'demo/content.html'} Content
+                  %li 
+                    %a{href: 'demo/forms.html'} Forms
+                  %li 
+                    %a{href: 'demo/grid.html'} Grid
+                  %li 
+                    %a{href: 'demo/links.html'} Links
+                  %li 
+                    %a{href: 'demo/styles.html'} Styles

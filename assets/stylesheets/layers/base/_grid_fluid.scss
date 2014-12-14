@@ -1,0 +1,35 @@
+@mixin grid-fluid($classname, $property, $gutter) {
+  @for $i from 1 through $grid-fluid-col-qty {
+    @for $j from 1 through $i {
+      $result: 100% / $i * $j;
+      > %#{$classname}-#{$j}-#{$i},
+      > .#{$classname}-#{$j}-#{$i} {#{$property}: $result + $gutter;}
+    }
+  }
+}
+
+@if $grid == "fluid" {
+  @include class(grid) {
+    margin-bottom: -#{$grid-fluid-col-indent};
+    margin-left: -#{$grid-fluid-col-gutter};
+    @include class-direct-child(grid_i) {
+      margin-bottom: #{$grid-fluid-col-indent};
+      margin-left: #{$grid-fluid-col-gutter};
+    }
+    @include grid-fluid("grid_i__grid", "width", -$grid-fluid-col-gutter);
+    @include grid-fluid("grid_i__prefix", "margin-left", $grid-fluid-col-gutter);
+    @include grid-fluid("grid_i__suffix", "margin-right", 0);
+  }
+  
+  @include class(grid__collapse) {
+    margin-bottom: 0;
+    margin-left: 0;
+    @include class-direct-child(grid_i) {
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+    @include grid-fluid("grid_i__grid", "width", 0);
+    @include grid-fluid("grid_i__prefix", "margin-left", 0);
+    @include grid-fluid("grid_i__suffix", "margin-right", 0);
+  }
+}

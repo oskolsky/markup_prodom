@@ -1,0 +1,65 @@
+!!!
+%html.no-js{lang: 'ru-RU'}
+  %head
+    %title Styles / Chemistry Template
+    = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
+  
+  %body#page.page
+    = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
+    
+    %main#main.main{role: 'main'}
+      %section{role: 'region', aria: {label: 'Styles'}}
+        .pt-6.pb-6
+          .ctn
+            %article
+              %header.mb-6
+                %h1 Styles
+
+              .grid
+                .grid_i.grid_i__desktop-grid-1-4.grid_i__desktop-suffix-1-12.grid_i__tablet-grid-5-12.grid_i__tablet-suffix-1-12.grid_i__phone-grid-5-6.grid_i__phone-suffix-1-6>
+                  %h4.mb-3 Align
+
+                  %p.tx-left Left
+                  %p.tx-center Center
+                  %p.tx-right Right
+
+                .grid_i.grid_i__desktop-grid-1-3.grid_i__tablet-grid-1-2.grid_i__phone-grid-1-1>
+                  %h4.mb-3 Color
+
+                  %p.tx-major Major
+                  %p.tx-minor Minor
+                  %p.tx-voice Voice
+                  %p.tx-muted Muted
+
+                .grid_i.grid_i__desktop-grid-1-3.grid_i__tablet-grid-1-2.grid_i__phone-grid-1-1>
+                  %h4.mb-3 Currency
+
+                  %p.format-money.format-money__usd 1000
+                  %p.format-money.format-money__eur 1000
+                  %p.format-money.format-money__rub 1000
+
+                .grid_i.grid_i__desktop-grid-1-3.grid_i__tablet-grid-1-2.grid_i__phone-grid-1-1>
+                  %h4.mb-3 Numbers
+
+                  %p.format-number 1234567890
+
+                .grid_i.grid_i__desktop-grid-1-3.grid_i__tablet-grid-1-2.grid_i__phone-grid-1-1>
+                  %h4.mb-3 Size
+                
+                  %p.tx-xxl xxlarge
+                  %p.tx-xl xlarge
+                  %p.tx-l large
+
+                  %p.tx-s small
+                  %p.tx-xs xsmall
+                  %p.tx-xxs xxsmall
+
+                .grid_i.grid_i__desktop-grid-1-3.grid_i__tablet-grid-1-2.grid_i__phone-grid-1-1>
+                  %h4.mb-3 Transform
+                
+                  %p.tx-cap Capitalize
+                  %p.tx-lower Lowercase
+                  %p.tx-upper Uppercase
+              
+    = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

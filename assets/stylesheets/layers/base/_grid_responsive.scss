@@ -1,0 +1,80 @@
+@mixin grid-responsive($media: "", $classname: "", $property: "", $indent: "") {
+  @for $i from 1 through $grid-responsive-col-qty {
+    @for $j from 1 through $i {
+      $result: 100% / $i * $j;
+      > %grid_i__#{$media}-#{$classname}-#{$j}-#{$i},
+      > .grid_i__#{$media}-#{$classname}-#{$j}-#{$i} {#{$property}: $result + $indent;}
+    }
+  }
+}
+
+@if $grid == "responsive" {
+  @include class(grid) {
+    margin-bottom: -$grid-responsive-col-indent;
+    margin-left: -$grid-responsive-col-gutter;
+    @include class-direct-child(grid_i) {
+      margin-bottom: $grid-responsive-col-indent;
+      margin-left: $grid-responsive-col-gutter;
+    }
+  }
+
+  @include class(grid__collapse) {
+    margin-bottom: 0;
+    margin-left: 0;
+    @include class-direct-child(grid_i) {
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+  }
+  
+  //
+  // .. Phone
+  //
+  @include mq(phone) {
+    @include class(grid) {
+      @include grid-responsive("phone", "grid", "width", -$grid-responsive-col-gutter);
+      @include grid-responsive("phone", "prefix", "margin-left", $grid-responsive-col-gutter);
+      @include grid-responsive("phone", "suffix", "margin-right", 0);
+    }
+
+    @include class(grid__collapse) {
+      @include grid-responsive("phone", "grid", "width", 0);
+      @include grid-responsive("phone", "prefix", "margin-left", 0);
+      @include grid-responsive("phone", "suffix", "margin-right", 0);
+    }
+  }
+
+  //
+  // .. Tablet
+  //
+  @include mq(tablet) {
+    @include class(grid) {
+      @include grid-responsive("tablet", "grid", "width", -$grid-responsive-col-gutter);
+      @include grid-responsive("tablet", "prefix", "margin-left", $grid-responsive-col-gutter);
+      @include grid-responsive("tablet", "suffix", "margin-right", 0);
+    }
+
+    @include class(grid__collapse) {
+      @include grid-responsive("tablet", "grid", "width", 0);
+      @include grid-responsive("tablet", "prefix", "margin-left", 0);
+      @include grid-responsive("tablet", "suffix", "margin-right", 0);
+    }
+  }
+
+  //
+  // .. Desktop
+  //
+  @include mq(desktop) {
+    @include class(grid) {
+      @include grid-responsive("desktop", "grid", "width", -$grid-responsive-col-gutter);
+      @include grid-responsive("desktop", "prefix", "margin-left", $grid-responsive-col-gutter);
+      @include grid-responsive("desktop", "suffix", "margin-right", 0);
+    }
+
+    @include class(grid__collapse) {
+      @include grid-responsive("desktop", "grid", "width", 0);
+      @include grid-responsive("desktop", "prefix", "margin-left", 0);
+      @include grid-responsive("desktop", "suffix", "margin-right", 0);
+    }
+  }
+}

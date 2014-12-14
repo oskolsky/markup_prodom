@@ -1,0 +1,49 @@
+@mixin mq($media-query) {
+  @if $media-query == "phone" {
+    @media all and (max-width: nth($ctn-responsive-max-width-list, 1)) {@content;}
+  }
+  @if $media-query == "tablet" {
+    @media all and (min-width: nth($ctn-responsive-min-width-list, 2)) and (max-width: nth($ctn-responsive-max-width-list, 2)) {@content;}
+  }
+  @if $media-query == "desktop" {
+    @media all and (min-width: nth($ctn-responsive-min-width-list, 3)) {@content;}
+  }
+}
+
+@mixin class($classname) {
+  %#{$classname},
+  .#{$classname} {@content;}
+}
+
+@mixin class-direct-child($classname) {
+  > %#{$classname},
+  > .#{$classname} {@content;}
+}
+
+@mixin linear-gradient($direction, $start, $end) {
+  background-color: $start;
+  @if ($direction == "horizontal") {
+    background: -webkit-linear-gradient(left, $start 0%, $end 100%);
+    background:         linear-gradient(to right, $start 0%, $end 100%);
+  } @else if ($direction == "vertical") {
+    background: -webkit-linear-gradient(top, $start 0%, $end 100%);
+    background:         linear-gradient(to bottom, $start 0%, $end 100%);
+  }
+}
+
+// .. Used in development. In staging/production compiled CSS passed through autoprefixer (https://github.com/ai/autoprefixer)
+@mixin prefixes($property, $value) {
+  -webkit-#{$property}: $value;
+     -moz-#{$property}: $value;
+      -ms-#{$property}: $value;
+       -o-#{$property}: $value;
+          #{$property}: $value;
+}
+
+@function image-url($path) {
+  @return url(/assets/images/#{$path});
+}
+
+@function font-url($path) {
+  @return url(/assets/fonts/#{$path});
+}

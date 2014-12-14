@@ -1,0 +1,234 @@
+.cnt {
+ 
+  //****************************************************************************************************
+  //
+  // .. INLINE
+  //
+  //****************************************************************************************************
+  //
+  // .. Links
+  //
+  @if $content-link-style == true {
+    a {
+      color: $content-link-color;
+      &:hover  {color: $content-link-color-hover;}
+      &:active {color: $content-link-color-active;}
+    }
+  }
+
+  //
+  // .. Abbr, dfn
+  //
+  abbr[title],
+  dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+  }
+
+  //
+  // .. Del, ins
+  //
+  del {text-decoration: line-through;}
+  ins {
+    padding: 0 .3em;
+    background-color: #ff9;
+    text-decoration: none;
+  }
+
+  //
+  // .. Mark
+  //
+  mark {
+    padding: 0 .3em;
+    background-color: #ff9;
+    font: {
+      weight: 700;
+      style: italic;
+    }
+  }
+
+  //
+  // .. Quotes
+  //
+  q {
+    quotes: "\00ab" "\00bb";
+    font-style: italic;
+    &::before {content: open-quote;}
+    &::after  {content: close-quote;}
+  }
+
+  //
+  // .. Small
+  //
+  small {
+    font: {
+      weight: 700;
+      size: 90%;
+    }
+  }
+
+  //
+  // .. Sub, sup
+  //
+  sub,
+  sup {
+    font-size: 70%;
+    line-height: 1;
+  }
+  sub {vertical-align: text-bottom;}
+  sup {vertical-align: text-top;}
+
+
+
+  //****************************************************************************************************
+  //
+  // .. BLOCK
+  //
+  //****************************************************************************************************
+  blockquote,
+  h1, h2, h3, h4, h5, h6,
+  dl, ol, ul,
+  figure, img,
+  p, 
+  pre,
+  table {
+    &:not(:last-child) {margin-bottom: #{$content-factor}rem;}
+  }
+
+  //
+  // .. Blockquote
+  //
+  blockquote {
+    padding: #{$content-factor * .75 - .1}rem #{$content-factor}rem;
+    background: #eee;
+    border: 1px solid #ccc;
+    font: {
+      style: italic;
+      size: 130%;
+    }
+    line-height: 160%;
+  }
+
+  //
+  // .. Lists
+  //
+  %lists-nesting {
+    ol,
+    ul,
+    p {margin-top: #{$content-factor / 2}rem;}
+    p {margin-bottom: #{$content-factor / 2}rem !important;}
+  }
+
+  dl dl {margin-top: #{$content-factor / 2}rem;}
+  dt {
+    margin-bottom: #{$content-factor / 2}rem;
+    font-weight: 700;
+  }
+  dd {
+    margin-left: #{$content-factor * 2}rem;
+    &:not(:last-child) {margin-bottom: #{$content-factor / 2}rem;}
+    @extend %lists-nesting;
+  }
+
+  ol {
+    list-style-type: decimal;
+    ol {
+      list-style-type: lower-alpha;
+      ol {list-style-type: lower-roman;}
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+    ul {
+      list-style-type: circle;
+      ul {list-style-type: square;}
+    }
+  }
+
+  ol li,
+  ul li {margin: 0 0 #{$content-factor / 2}rem #{$content-factor * 2}rem;}
+
+  li {@extend %lists-nesting;}
+
+  //
+  // .. Headings
+  //
+  h1, h2, h3, h4, h5, h6 {
+    &:not(:first-child) {margin-top: #{$content-factor * 2}rem;} 
+  }
+
+  //
+  // .. Figure
+  //
+  figure {
+    > img {margin-bottom: #{$content-factor / 2}rem !important;}
+    > figcaption {
+      color: #999;
+      font-style: italic;
+    }
+  } 
+
+  //
+  // .. Image
+  //
+  img {display: block;}
+
+  //
+  // .. Paragraph
+  //
+  p {}
+
+  //
+  // .. Pre > code
+  //
+  pre {
+    counter-reset: list;
+    padding: #{$content-factor - .1}rem #{$content-factor}rem #{$content-factor - .1}rem #{$content-factor * 3}rem;
+    background-color: #eee;
+    border: 1px dotted #ccc;
+    white-space: normal;
+    @include prefixes(overflow-x, hidden);
+    > code {
+      position: relative;
+      display: block;
+      padding: 0;
+      white-space: pre;
+      font-size: 130%;
+      &::before {
+        counter-increment: list;
+        content: counter(list) ".";
+        position: absolute;
+        top: 0;
+        right: 100%;
+        margin-right: #{$content-factor}rem;
+        color: #aaa;
+      }
+    }
+  }
+
+  //
+  // .. Table
+  //
+  table {
+    width: 100%;
+    caption,
+    th,
+    td {padding: #{$content-factor / 2}rem #{$content-factor}rem;}
+    caption {
+      text-align: right;
+      font-style: italic;
+    }
+    th {
+      background-color: #ddd;
+      text-align: left;
+    }
+    th,
+    tbody td {
+      padding-bottom: #{($content-factor / 2) - .1}rem;
+      border-bottom: 1px solid #ccc;
+    }
+    tfoot td {background-color: #eee;}
+  }
+
+}

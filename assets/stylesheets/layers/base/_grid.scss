@@ -1,0 +1,16 @@
+@include class(grid_i) {
+  &:not(td) {
+    display: inline-block;
+    vertical-align: top;
+    @include prefixes(box-sizing, border-box);
+    @if $grid-width-transition == true {@include prefixes(transition, width .33s ease);}
+  }
+}
+
+@include class(grid_i__middle) {
+  &:not(td) {vertical-align: middle;}
+}
+
+@include class(grid_i__bottom) {
+  &:not(td) {vertical-align: bottom;}
+}

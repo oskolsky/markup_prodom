@@ -1,0 +1,12 @@
+# Build
+/build
+
+# Cache
+/.sass-cache
+
+# IDEA
+.idea
+
+# Node
+/node_modules
+npm-debug.log

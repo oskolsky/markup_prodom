@@ -1,0 +1,115 @@
+textarea {resize: none;}
+
+
+
+//****************************************************************************************************
+//
+// .. ELEMENTS
+//
+//****************************************************************************************************
+.form_el {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  @include prefixes(box-sizing, border-box);
+  .grid_i > & {@extend .form_el__block;}
+}
+.form_el__block {
+  display: block;
+  width: 100%;
+}
+  .form_el_tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    @include prefixes(box-sizing, border-box);
+  }
+  .form_el_inner {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+//
+// .. Label
+//
+.form_label__el {
+  position: relative;
+  > .form_el {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    @include prefixes(transform, translateY(-50%));
+  }
+}
+
+//
+// .. Button
+//
+.form_btn_tag {
+  font-size: 0;
+  cursor: inherit;
+}
+
+//
+// .. Text, textarea
+//
+.form_tx,
+.form_textarea {min-width: 12rem;}
+  .form_tx_tag,
+  .form_textarea_tag {
+    padding: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+//
+// .. Checkbox, radio
+//
+.form_checkbox[data-checked="true"]::after,
+.form_radio[data-checked="true"]::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  @include prefixes(transform, translate(-50%, -50%));
+}
+  .form_checkbox_tag,
+  .form_radio_tag {
+    z-index: 2;
+    cursor: inherit;
+    opacity: 0;
+  }
+
+//
+// .. File
+//
+.form_file::after {
+  position: absolute;
+  top: 50%;
+  @include prefixes(transform, translateY(-50%));
+}
+  .form_file_tag {
+    z-index: -1; 
+    opacity: 0;
+  }
+
+//
+// .. Select
+//
+.form_select::after {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  @include prefixes(transform, translateY(-50%));
+}
+  .form_select_tag {
+    z-index: 2;
+    cursor: inherit;
+    opacity: 0;
+  }  

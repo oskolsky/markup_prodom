@@ -1,0 +1,82 @@
+a {
+  color: $link-color;
+  &:hover,
+  &.hover  {color: $link-color-hover;}
+  &:active {color: $link-color-active;}
+  @if $focus-style == true {
+    &:focus {@extend %focus-style;}
+  }
+}
+
+h1, h2, h3, h4, h5, h6,
+.alpha, .beta, .gamma, .delta, .epsilon, .zeta {
+  a, a:hover, a.hover,
+  .a-link_inner, .a-link:hover .a-link_inner, .a-link.hover .a-link_inner {text-decoration: none;}
+}
+
+.a-link,
+.a-link:hover,
+.a-link.hover,
+.a-pseudo,
+.a-pseudo:hover,
+.a-pseudo.hover {text-decoration: none;}
+  .a-link_ico,
+  .a-pseudo_ico {vertical-align: middle;}
+
+
+
+//****************************************************************************************************
+//
+// .. LINKS
+//
+//****************************************************************************************************
+@if $link-style == nn or $link-style == uu {
+  a:not(.a-pseudo),
+  .a-link {@include prefixes(transition, color .33s ease);}
+}
+
+@if $link-style == nn {
+  a, .a-link_inner {text-decoration: none;}
+} @else if $link-style == uu {
+  a, .a-link_inner {text-decoration: underline;}
+} @else if $link-style == un {
+  a, .a-link_inner {text-decoration: underline;}
+  
+  a:hover,
+  a.hover,
+  .a-link:hover .a-link_inner,
+  .a-link.hover .a-link_inner {text-decoration: none;}
+} @else if $link-style == nu {
+  a, .a-link_inner {text-decoration: none;}
+  a:hover,
+  a.hover,
+  .a-link:hover .a-link_inner,
+  .a-link.hover .a-link_inner {text-decoration: underline;}
+}
+
+
+
+//****************************************************************************************************
+//
+// .. PSEUDOLINKS
+//
+//****************************************************************************************************
+.a-pseudo_inner {border-bottom: .1em dotted $link-color;}
+
+@if $link-style-pseudo == uu {
+  .a-pseudo {
+    @include prefixes(transition, color .33s ease);
+    &:hover,
+    &.hover {
+      .a-pseudo_inner {border-bottom-color: $link-color-hover;} 
+    }
+  }
+    .a-pseudo_inner {@include prefixes(transition, border .33s ease);}
+} @else if $link-style-pseudo == un {
+  .a-pseudo {
+    &:hover,
+    &.hover {
+      .a-pseudo_inner {border-bottom-color: transparent;}
+    } 
+  }
+}
