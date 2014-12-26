@@ -1,10 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic);
 @import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic&subset=latin,cyrillic);
-@import "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic);
+@import "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css";
 @import url(vendor/selectordie.css);
 @import url(vendor/owl.carousel.css);
 @import url(vendor/animate.css);
-@import url(vendor/arcticmodal/jquery.arcticmodal-0.3.css);
+@import url(vendor/jquery.arcticmodal-0.3.css);
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, address, cite, code,
@@ -2950,10 +2951,8 @@ th, td {
 
 .ctn {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -3287,6 +3286,8 @@ textarea {
     transform: translateY(-50%); }
 
 .form_btn_tag {
+  opacity: 0;
+  background-color: #fff;
   font-size: 0;
   cursor: inherit; }
 
@@ -3401,10 +3402,10 @@ textarea {
 
 @media all and (max-width: 639px) {
   html {
-    font-size: 52.5%; } }
+    font-size: 62.5%; } }
 @media all and (min-width: 640px) and (max-width: 939px) {
   html {
-    font-size: 57.5%; } }
+    font-size: 62.5%; } }
 @media all and (min-width: 940px) {
   html {
     font-size: 62.5%; } }
@@ -4254,4 +4255,98 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
   color: #ddc9b2;
   font-style: italic; }
 
-/*# sourceMappingURL=application.css.map */
+.items > .owl-controls .owl-nav .owl-prev, .items > .owl-controls .owl-nav .owl-next {
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  vertical-align: top;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%); }
+.items > .owl-controls .owl-nav .owl-prev {
+  right: 100%; }
+.items > .owl-controls .owl-nav .owl-next {
+  left: 100%; }
+
+.item_gallery {
+  margin-bottom: 2rem; }
+  .item_gallery > .owl-controls {
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+    .item_gallery > .owl-controls .owl-nav .owl-prev, .item_gallery > .owl-controls .owl-nav .owl-next {
+      display: inline-block;
+      width: 4rem;
+      height: 4rem;
+      vertical-align: top;
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+      background-color: rgba(0, 0, 0, 0.6); }
+
+.item_photo {
+  vertical-align: top; }
+
+.item_header {
+  margin-right: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #1a1a1a; }
+
+.item_title {
+  font-family: "PT Serif", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 2.6rem; }
+
+.item_body {
+  font-family: "Open Sans", sans-serif;
+  margin-right: 3rem;
+  padding: 1.5rem 0 1.7rem;
+  border-bottom: 1px solid #e8e8e8; }
+
+.item_price {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-bottom: .5rem; }
+
+.item_summary {
+  font-size: 1.3rem;
+  line-height: 2.1rem;
+  color: #999; }
+
+.tags {
+  font-family: "Open Sans", sans-serif; }
+  @media all and (min-width: 940px) {
+    .tags {
+      text-align: right; }
+      .tags .tags_i:not(:first-child) {
+        margin-left: .3rem; } }
+  @media all and (min-width: 640px) and (max-width: 939px) {
+    .tags {
+      text-align: right; }
+      .tags .tags_i:not(:first-child) {
+        margin-left: .3rem; } }
+  @media all and (max-width: 639px) {
+    .tags {
+      text-align: left; }
+      .tags .tags_i:not(:last-child) {
+        margin-right: .3rem; } }
+
+.tags_i {
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+  display: inline-block;
+  margin-bottom: .3rem;
+  padding: 0 .8rem;
+  vertical-align: top;
+  color: #808080;
+  background-color: #f2f2f2; }
+  .tags_i:hover {
+    color: #808080; }
+  .tags__main .tags_i {
+    border-top: .2rem solid; }

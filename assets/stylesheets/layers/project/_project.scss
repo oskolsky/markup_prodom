@@ -68,7 +68,7 @@
   // .. Callback
   //
   .callback {
-    font-family: $open-sans;
+    font-family: $font-opensans;
     font-weight: 600;
     line-height: 3.4rem;
     height: 4rem;
@@ -129,7 +129,7 @@
       vertical-align: top;
     }
     .logo_tx {
-      font-family: $open-sans;
+      font-family: $font-opensans;
       font-size: 1rem;
       line-height: 1.2rem;
       color: #4c4c4c;
@@ -142,7 +142,7 @@
   margin-bottom: 2.5rem;
 }
   .main-nav_i {
-    font-family: $open-sans;
+    font-family: $font-opensans;
     font-size: 1.2rem;
     font-weight: 600;
     line-height: 6rem;
@@ -175,7 +175,7 @@
   margin-bottom: 2.5rem;
 }
   .sub-nav_i {
-    font-family: $open-sans;
+    font-family: $font-opensans;
     font-size: 1.4rem;
     line-height: 3.8rem;
     display: block;
@@ -201,7 +201,7 @@
 // .. Request
 //
 .request {
-  font-family: $open-sans;
+  font-family: $font-opensans;
   font-size: 1rem;
   font-weight: 600;
   line-height: 3.1rem;
@@ -260,9 +260,162 @@
 
 //****************************************************************************************************
 //
+// .. ITEMS
+//
+//****************************************************************************************************
+//
+// .. Items ollection
+//
+.items {
+  > .owl-controls {
+    .owl-nav {
+      .owl-prev, .owl-next {
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        vertical-align: top;
+        border-right: 1px solid rgba(255, 255, 255, .2);
+        background-color: rgba(0, 0, 0, .6);
+        @include prefixes(transform, translateY(-50%));
+      }
+      .owl-prev {
+        right: 100%;
+      }
+      .owl-next {
+        left: 100%;
+      }
+    }
+  }
+}
+
+//
+// .. Single item
+//
+.item {
+
+}
+  .item_gallery {
+    margin-bottom: 2rem;
+    > .owl-controls {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      .owl-nav {
+        .owl-prev, .owl-next {
+          display: inline-block;
+          width: 4rem;
+          height: 4rem;
+          vertical-align: top;
+          border-right: 1px solid rgba(255, 255, 255, .2);
+          background-color: rgba(0, 0, 0, .6);
+        }
+        .owl-prev {
+
+        }
+        .owl-next {
+
+        }
+      }
+    }
+  }
+    .item_photo {        
+      vertical-align: top;
+    }
+  .item_header {
+    margin-right: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid $base-color;
+  }
+    .item_title {
+      font-family: $font-playfair;
+      font-size: 2rem;
+      font-weight: 700;
+      font-style: italic;
+      line-height: 2.6rem;
+    }
+  .item_body {
+    font-family: $font-opensans;
+    margin-right: 3rem;
+    padding: 1.5rem 0 1.7rem;
+    border-bottom: 1px solid #e8e8e8;
+  }
+    .item_price {   
+      font-size: 1.4rem;
+      line-height: 2rem;
+      margin-bottom: .5rem;
+    }
+    .item_summary {
+      font-size: 1.3rem;
+      line-height: 2.1rem;
+      color: #999;
+    }
+      .item_summary_i {
+
+      }
+
+
+
+//****************************************************************************************************
+//
 // .. FOOTER
 //
 //****************************************************************************************************
 .footer {
 
 }
+
+
+
+//****************************************************************************************************
+//
+// .. ELEMENTS
+//
+//****************************************************************************************************
+//
+// .. Tags
+//
+.tags {
+  font-family: $font-opensans;
+  @include mq(desktop) {
+    text-align: right;
+    .tags_i {
+      &:not(:first-child) {
+        margin-left: .3rem;
+      }
+    }  
+  }
+  @include mq(tablet) {
+    text-align: right;
+    .tags_i {
+      &:not(:first-child) {
+        margin-left: .3rem;
+      }
+    }  
+  }
+  @include mq(phone) {
+    text-align: left;
+    .tags_i {
+      &:not(:last-child) {
+        margin-right: .3rem;
+      }
+    }
+  }  
+}
+  .tags_i {
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+    display: inline-block;
+    margin-bottom: .3rem;
+    padding: 0 .8rem;
+    vertical-align: top;
+    color: #808080;
+    background-color: #f2f2f2;
+    &:hover {
+      color: #808080;
+    }
+    .tags__main & {
+      border-top: .2rem solid;
+    }
+  }

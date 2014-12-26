@@ -28,7 +28,7 @@ accounting.settings = {
   currency: {
     decimal: '.',
     thousand: ' ',
-    precision: 2
+    precision: 0
   },
   number: {
     decimal : '.',

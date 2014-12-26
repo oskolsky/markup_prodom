@@ -76,8 +76,6 @@ th, td {@include prefixes(box-sizing, border-box);}
 //
 @include class(ctn) {
   display: block;
-  margin-right: auto;
-  margin-left:  auto;
   padding-right: $ctn-padding;
   padding-left:  $ctn-padding;
   @if $grid == "fixed" {width: #{$ctn-fixed-width};}
