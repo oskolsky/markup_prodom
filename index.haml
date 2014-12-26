@@ -1,15 +1,21 @@
 !!!
 %html.no-js{lang: 'ru-RU'}
   %head
-    %title Chemistry Template
+    %title Продом
     = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
   
   %body#page.page
     = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
     = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
-    
-    %main#main.main{role: 'main'}
-      %section{role: 'region', aria: {label: 'Index'}}
-        .ctn
-              
+
+    %main#main.main{role: 'main'}      
+      = Haml::Engine.new(File.read('views/layouts/_sidebar.haml')).render
+
+      %section{role: 'region', aria: {label: 'Index promo'}}
+        .index-promo{style: "background-image: url(/assets/images/index-promo-1.jpg)"}
+          .index-promo_caption
+            .index-promo_caption_t Жилые дома с&nbsp;восхитительной архитектурой в&nbsp;экологически чистом районе
+            .index-promo_caption_tx 9 предложений
+
+
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

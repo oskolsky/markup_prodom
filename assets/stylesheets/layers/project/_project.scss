@@ -11,19 +11,250 @@
 //
 //****************************************************************************************************
 .header {
-  
+  line-height: 4rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 21rem;
+  height: 4rem;
+  background-color: #4d4d4d;
 }
 .header__sticky {
   .no-touch & {
     position: fixed;
     top: 0;
-    right: 0;
+    bottom: 0;
     left: 0;
     z-index: 999;
     background-color: $base-bg;
     box-shadow: .1em .1em .3em rgba(0,0,0,.25);
   }
 }
+
+  //
+  // .. Search toggle
+  //
+  .search-toggle {
+    line-height: inherit;
+    display: block;
+    width: 5rem;
+    height: inherit;
+    cursor: pointer;
+    text-align: center;
+    color: #737373;
+    background-color: #454545;
+    @extend %ico;
+    @extend %ico__16;
+    @extend %ico__search;
+  }
+
+  //
+  // .. Like toggle
+  //
+  .like-toggle {
+    line-height: inherit;
+    display: block;
+    width: 5rem;
+    height: inherit;
+    cursor: pointer;
+    text-align: center;
+    color: #737373;
+    @extend %ico;
+    @extend %ico__16;
+    @extend %ico__star;
+  }
+
+  //
+  // .. Callback
+  //
+  .callback {
+    font-family: $open-sans;
+    font-weight: 600;
+    line-height: 3.4rem;
+    height: 4rem;
+    padding: 0 2.5rem;
+    background-color: #454545;
+  }
+    .callback_label {
+      font-size: 1rem;
+      display: inline-block;
+      margin-right: 3rem;
+      letter-spacing: 1pt;
+      text-transform: uppercase;
+      color: #999;
+    }
+    .callback_phone {
+      font-size: 1.3rem;
+      display: inline-block;
+      color: #fff;
+    }
+
+
+//****************************************************************************************************
+//
+// .. MAIN
+//
+//****************************************************************************************************
+.main {
+  padding-top: 4rem;
+  padding-left: 21rem;
+}
+
+
+
+//****************************************************************************************************
+//
+// .. SIDEBAR
+//
+//****************************************************************************************************
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 21rem;
+  text-align: center;
+  background-color: #2b2b2b;
+}
+
+  //
+  // .. Logo
+  //
+  .logo {
+    display: block;
+    padding: 4rem 0;
+  }
+    .logo_img {
+      margin-bottom: 1rem;
+      vertical-align: top;
+    }
+    .logo_tx {
+      font-family: $open-sans;
+      font-size: 1rem;
+      line-height: 1.2rem;
+      color: #4c4c4c;
+    }
+
+//
+// .. Main navigation
+//
+.main-nav {
+  margin-bottom: 2.5rem;
+}
+  .main-nav_i {
+    font-family: $open-sans;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 6rem;
+    display: block;
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    color: #fefefe;
+    border-top: .1rem solid #333;
+
+    &:last-child {
+      border-bottom: .1rem solid #333;
+    }
+
+    &:hover {
+      color: #fefefe;
+      
+      &:not(.main-nav_i__current) {
+        background-color: #333;
+      }
+    }
+  }
+  .main-nav_i__current {
+    background-color: #212121;
+  }
+
+//
+// .. Sub navigation
+//
+.sub-nav {
+  margin-bottom: 2.5rem;
+}
+  .sub-nav_i {
+    font-family: $open-sans;
+    font-size: 1.4rem;
+    line-height: 3.8rem;
+    display: block;
+    color: #808080;
+
+    &:not(:last-child) {
+      margin-bottom: .3rem;
+    }
+
+    &:hover {
+      color: #808080;
+      
+      &:not(.sub-nav_i__current) {
+        background-color: #333;
+      }
+    }
+  }
+  .sub-nav_i__current {
+    background-color: #212121;
+  }
+
+//
+// .. Request
+//
+.request {
+  font-family: $open-sans;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 3.1rem;
+  display: inline-block;
+  padding: 0 2rem;
+  letter-spacing: 1pt;
+  text-transform: uppercase;
+  color: #808080;
+  border: .1rem solid #666;
+  border-radius: .3rem;
+  @include prefixes(box-sizing, border-box);
+
+  &:hover {
+    color: #808080;
+  }
+}
+
+
+
+//****************************************************************************************************
+//
+// .. INDEX PROMO
+//
+//****************************************************************************************************
+.index-promo {
+  position: relative;
+  height: 54rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+  .index-promo_caption {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    width: 63rem;
+    padding: 2.5rem 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .7);
+    @include prefixes(transform, translateX(-50%));
+  }
+    .index-promo_caption_t {
+      font-size: 2.2rem;
+      line-height: 2.6rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    .index-promo_caption_tx {
+      font-size: 1.4rem;
+      line-height: 2.5rem;
+      color: #ddc9b2;
+      font-style: italic;
+    }
 
 
 

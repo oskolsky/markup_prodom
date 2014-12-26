@@ -3,7 +3,11 @@
 // .. FONTS
 //
 //****************************************************************************************************
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic&subset=latin,cyrillic);
+
+$open-sans: 'Open Sans', sans-serif; 
+$pt-serif: 'PT Serif', serif;
 
 
 
@@ -81,32 +85,32 @@ $root-font-size-list: (52.5%, 57.5%, 62.5%);
 // .. Body
 //
 $base-bg: #fff;
-$base-color: #333;
-$base-font-family: "Open Sans", Helvetica, Arial, sans-serif;
-$base-font-size-list: (1.4rem, 1.4rem, 1.4rem);
+$base-color: #1a1a1a;
+$base-font-family: $pt-serif;
+$base-font-size-list: (1.8rem, 1.8rem, 1.8rem);
 $base-font-weight: 400;
-$base-line-height-list: (2rem, 2rem, 2rem);
+$base-line-height-list: (2.5rem, 2.5rem, 2.5rem);
 
 //
 // .. Headings
 //
-$h-font-family: $base-font-family;
+$h-font-family: $open-sans;
 
-$h1-font-size-list: (4rem, 4rem, 4rem);
+$h1-font-size-list: (2.6rem, 2.6rem, 2.6rem);
 $h2-font-size-list: (3rem, 3rem, 3rem);
 $h3-font-size-list: (2.5rem, 2.5rem, 2.5rem);
 $h4-font-size-list: (2rem, 2rem, 2rem);
 $h5-font-size-list: (inherit, inherit, inherit);
 $h6-font-size-list: (inherit, inherit, inherit);
 
-$h1-font-weight-list: (600, 600, 600);
+$h1-font-weight-list: (700, 700, 700);
 $h2-font-weight-list: (600, 600, 600);
 $h3-font-weight-list: (600, 600, 600);
 $h4-font-weight-list: (600, 600, 600);
 $h5-font-weight-list: (600, 600, 600);
 $h6-font-weight-list: (inherit, inherit, inherit);
 
-$h1-line-height-list: (4rem, 4rem, 4rem);
+$h1-line-height-list: (3.0rem, 3.0rem, 3.0rem);
 $h2-line-height-list: (3.2rem, 3.2rem, 3.2rem);
 $h3-line-height-list: (2.8rem, 2.8rem, 2.8rem);
 $h4-line-height-list: (2.4rem, 2.4rem, 2.4rem);
@@ -124,7 +128,7 @@ $muted-color: #ccc;
 //
 // .. Focus
 //
-$focus-style: true; // .. true / false
+$focus-style: false; // .. true / false
 
 //
 // .. Links
@@ -132,7 +136,7 @@ $focus-style: true; // .. true / false
 $link-color: #36c;
 $link-color-hover: #ccc;
 $link-color-active: darken($link-color-hover, 10%);
-$link-style: un;        // .. nn / uu / un / nu
+$link-style: nn;        // .. nn / uu / un / nu
 $link-style-pseudo: uu; // .. uu / un
 
 //
