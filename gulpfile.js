@@ -5,6 +5,7 @@
 //****************************************************************************************************
 var
   del = require('del'),
+  es = require('event-stream'),
   gulp = require('gulp'),
   plugin = require('gulp-load-plugins')(),
   path = require('./path.json');
@@ -48,36 +49,35 @@ gulp.task('layouts:p', function() {
 
 //
 // .. Stylesheets
+// .. https://github.com/sindresorhus/gulp-ruby-sass/issues/156
 //
 gulp.task('stylesheets:d', function() {
   gulp.src(path.stylesheets.app)
-    .pipe(plugin.rubySass({noCache: true}))
+    .pipe(plugin.rubySass({noCache: true, 'sourcemap=none': true}))
     .pipe(gulp.dest(path.stylesheets.dest));
 });
 
 gulp.task('stylesheets:s', function() {
   gulp.src(path.stylesheets.app)
-    .pipe(plugin.rubySass({noCache: true}))
+    .pipe(plugin.rubySass({noCache: true, 'sourcemap=none': true}))
     .pipe(plugin.autoprefixer('last 2 versions'))
     .pipe(gulp.dest(path.stylesheets.dest));
 });
-
-
-
-
 
 gulp.task('stylesheets:p', function() {
-  gulp.src(path.stylesheets.app)
-    .pipe(plugin.rubySass({noCache: true}))
-    .pipe(plugin.autoprefixer('last 2 versions'))
-    .pipe(plugin.concatCss('application.css'))
-    .pipe(plugin.minifyCss({processImport: false}))
-    .pipe(gulp.dest(path.stylesheets.dest));
+  var
+    _scss = gulp.src(path.stylesheets.app)
+              .pipe(plugin.rubySass({noCache: true, 'sourcemap=none': true}))
+              .pipe(plugin.autoprefixer('last 2 versions'))
+              .pipe(plugin.minifyCss()),
+  
+    _vendor = gulp.src(path.stylesheets.vendor.all)
+                .pipe(plugin.minifyCss());
+
+  return es.merge(_scss, _vendor)
+          .pipe(plugin.concat('application.css'))
+          .pipe(gulp.dest(path.stylesheets.dest));
 });
-
-
-
-
 
 gulp.task('stylesheets:v', function() {
   gulp.src(path.stylesheets.vendor.all)

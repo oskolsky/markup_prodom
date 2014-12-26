@@ -50,6 +50,8 @@ textarea {resize: none;}
 // .. Button
 //
 .form_btn_tag {
+  opacity: 0;             // .. IE9/10 click availability
+  background-color: #fff; // .. IE9/10 click availability
   font-size: 0;
   cursor: inherit;
 }
