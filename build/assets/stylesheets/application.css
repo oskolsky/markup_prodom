@@ -3690,11 +3690,11 @@ img {
   text-transform: uppercase; }
 
 a {
-  color: #36c; }
+  color: #1a1a1a; }
   a:hover, a.hover {
-    color: #ccc; }
+    color: #1a1a1a; }
   a:active {
-    color: #b3b3b3; }
+    color: black; }
 
 h1 a, h1 a:hover, h1 a.hover,
 h1 .a-link_inner, h1 .a-link:hover .a-link_inner, h1 .a-link.hover .a-link_inner, h2 a, h2 a:hover, h2 a.hover,
@@ -3732,10 +3732,10 @@ a, .a-link_inner {
   text-decoration: none; }
 
 .a-pseudo_inner {
-  border-bottom: 0.1em dotted #36c; }
+  border-bottom: 0.1em dotted #1a1a1a; }
 
 .a-pseudo:hover .a-pseudo_inner, .a-pseudo.hover .a-pseudo_inner {
-  border-bottom-color: #ccc; }
+  border-bottom-color: #1a1a1a; }
 
 button, input, select, textarea {
   -webkit-border-radius: 0;
@@ -3936,12 +3936,12 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 .cnt table:not(:last-child) {
   margin-bottom: 2rem; }
 .cnt blockquote {
-  padding: 1.4rem 2rem;
-  background: #eee;
-  border: 1px solid #ccc;
-  font-style: italic;
-  font-size: 130%;
-  line-height: 160%; }
+  color: #808080;
+  font-style: italic; }
+  .cnt blockquote::before, .cnt blockquote::after {
+    content: '\00ab'; }
+  .cnt blockquote::after {
+    content: '\00bb'; }
 .cnt dd ol, .cnt li ol,
 .cnt dd ul,
 .cnt li ul,
@@ -3973,14 +3973,19 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
       list-style-type: square; }
 .cnt ol li,
 .cnt ul li {
-  margin: 0 0 1rem 4rem; }
+  margin: 0 0 2rem 4rem; }
 .cnt h1:not(:first-child), .cnt h2:not(:first-child), .cnt h3:not(:first-child), .cnt h4:not(:first-child), .cnt h5:not(:first-child), .cnt h6:not(:first-child) {
   margin-top: 4rem; }
 .cnt figure > img {
   margin-bottom: 1rem !important; }
 .cnt figure > figcaption {
-  color: #999;
-  font-style: italic; }
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #808080; }
+  .cnt figure > figcaption::before, .cnt figure > figcaption::after {
+    content: '\00ab'; }
+  .cnt figure > figcaption::after {
+    content: '\00bb'; }
 .cnt img {
   display: block; }
 .cnt pre {
@@ -4075,6 +4080,9 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 @media all and (min-width: 640px) and (max-width: 939px) {
   body {
     padding-top: 0 !important; } }
+.dbg {
+  background-color: red; }
+
 .header {
   line-height: 4rem;
   position: absolute;
@@ -4083,6 +4091,12 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
   left: 21rem;
   height: 4rem;
   background-color: #4d4d4d; }
+  @media all and (max-width: 639px) {
+    .header {
+      display: none; } }
+  @media all and (min-width: 640px) and (max-width: 939px) {
+    .header {
+      display: none; } }
 
 .no-touch .header__sticky {
   position: fixed;
@@ -4095,7 +4109,7 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 
 .search-toggle {
   line-height: inherit;
-  display: block;
+  display: inline-block;
   width: 5rem;
   height: inherit;
   cursor: pointer;
@@ -4133,9 +4147,23 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
   display: inline-block;
   color: #fff; }
 
-.main {
-  padding-top: 4rem;
-  padding-left: 21rem; }
+.clean-favorites {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-left: 3rem;
+  vertical-align: top;
+  letter-spacing: 1pt;
+  text-transform: uppercase;
+  color: #999; }
+  .clean-favorites:hover {
+    color: #999; }
+
+@media all and (min-width: 940px) {
+  .main {
+    padding-top: 4rem;
+    padding-left: 21rem; } }
 
 .sidebar {
   position: fixed;
@@ -4145,6 +4173,12 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
   width: 21rem;
   text-align: center;
   background-color: #2b2b2b; }
+  @media all and (max-width: 639px) {
+    .sidebar {
+      display: none; } }
+  @media all and (min-width: 640px) and (max-width: 939px) {
+    .sidebar {
+      display: none; } }
 
 .logo {
   display: block;
@@ -4350,3 +4384,28 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
     color: #808080; }
   .tags__main .tags_i {
     border-top: .2rem solid; }
+
+.load-more {
+  text-align: center; }
+
+.load-more_a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 3.7rem;
+  display: inline-block;
+  height: 3.7rem;
+  padding: 0 2.5rem;
+  text-align: center;
+  letter-spacing: 1pt;
+  text-transform: uppercase;
+  color: #999;
+  border: 1px solid #d9d9d9;
+  border-radius: .3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+  .load-more_a:hover {
+    color: #999; }

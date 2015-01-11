@@ -99,14 +99,14 @@
   // .. Blockquote
   //
   blockquote {
-    padding: #{$content-factor * .75 - .1}rem #{$content-factor}rem;
-    background: #eee;
-    border: 1px solid #ccc;
-    font: {
-      style: italic;
-      size: 130%;
+    color: #808080;
+    font-style: italic;
+    &::before, &::after {
+      content: '\00ab';
     }
-    line-height: 160%;
+    &::after {
+      content: '\00bb';
+    }  
   }
 
   //
@@ -147,7 +147,7 @@
   }
 
   ol li,
-  ul li {margin: 0 0 #{$content-factor / 2}rem #{$content-factor * 2}rem;}
+  ul li {margin: 0 0 #{$content-factor}rem #{$content-factor * 2}rem;}
 
   li {@extend %lists-nesting;}
 
@@ -164,8 +164,15 @@
   figure {
     > img {margin-bottom: #{$content-factor / 2}rem !important;}
     > figcaption {
-      color: #999;
+      font-size: 1.4rem;
       font-style: italic;
+      color: #808080;
+      &::before, &::after {
+        content: '\00ab';
+      }
+      &::after {
+        content: '\00bb';
+      }
     }
   } 
 

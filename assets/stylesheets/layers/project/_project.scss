@@ -4,6 +4,16 @@
 }
 
 
+//****************************************************************************************************
+//
+// .. DEBUG
+//
+//****************************************************************************************************
+.dbg {
+  background-color: red;
+}
+
+
 
 //****************************************************************************************************
 //
@@ -18,6 +28,15 @@
   left: 21rem;
   height: 4rem;
   background-color: #4d4d4d;
+  @include mq(phone) {
+    display: none;    
+  }
+  @include mq(tablet) {
+    display: none;
+  }
+  @include mq(desktop) {
+
+  }  
 }
 .header__sticky {
   .no-touch & {
@@ -36,7 +55,7 @@
   //
   .search-toggle {
     line-height: inherit;
-    display: block;
+    display: inline-block;
     width: 5rem;
     height: inherit;
     cursor: pointer;
@@ -89,6 +108,25 @@
       color: #fff;
     }
 
+  //
+  // .. Clean favorites
+  //
+  .clean-favorites {
+    font-family: $font-opensans;
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-left: 3rem;
+    vertical-align: top;
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    color: #999;
+    &:hover {
+      color: #999;  
+    }
+  }
+
+
 
 //****************************************************************************************************
 //
@@ -96,8 +134,16 @@
 //
 //****************************************************************************************************
 .main {
-  padding-top: 4rem;
-  padding-left: 21rem;
+  @include mq(phone) {
+    
+  }
+  @include mq(tablet) {
+    
+  }
+  @include mq(desktop) {
+    padding-top: 4rem;
+    padding-left: 21rem;
+  }
 }
 
 
@@ -115,6 +161,15 @@
   width: 21rem;
   text-align: center;
   background-color: #2b2b2b;
+  @include mq(phone) {
+    display: none;
+  }
+  @include mq(tablet) {
+    display: none;
+  }
+  @include mq(desktop) {
+
+  }
 }
 
   //
@@ -151,11 +206,9 @@
     text-transform: uppercase;
     color: #fefefe;
     border-top: .1rem solid #333;
-
     &:last-child {
       border-bottom: .1rem solid #333;
     }
-
     &:hover {
       color: #fefefe;
       
@@ -180,14 +233,11 @@
     line-height: 3.8rem;
     display: block;
     color: #808080;
-
     &:not(:last-child) {
       margin-bottom: .3rem;
     }
-
     &:hover {
       color: #808080;
-      
       &:not(.sub-nav_i__current) {
         background-color: #333;
       }
@@ -213,7 +263,6 @@
   border: .1rem solid #666;
   border-radius: .3rem;
   @include prefixes(box-sizing, border-box);
-
   &:hover {
     color: #808080;
   }
@@ -417,5 +466,31 @@
     }
     .tags__main & {
       border-top: .2rem solid;
+    }
+  }
+
+//
+// .. Load more
+//
+.load-more {
+  text-align: center;
+}
+  .load-more_a {
+    font-family: $font-opensans;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 3.7rem;
+    display: inline-block;
+    height: 3.7rem;
+    padding: 0 2.5rem;
+    text-align: center;
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    color: #999;
+    border: 1px solid #d9d9d9;
+    border-radius: .3rem;
+    @include prefixes(box-sizing, border-box);
+    &:hover {
+      color: #999;
     }
   }
