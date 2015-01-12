@@ -1,0 +1,14 @@
+!!!
+%html.no-js{lang: 'ru-RU'}
+  %head
+    %title Предложение / Продом
+    = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
+  
+  %body#page.page
+    = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
+
+    %main#main.main{role: 'main'}      
+      = Haml::Engine.new(File.read('views/layouts/_sidebar.haml')).render
+
+    = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

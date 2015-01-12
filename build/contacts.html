@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class='no-js' lang='ru-RU'>
   <head>
-    <title>Продом</title>
+    <title>Контакты / Продом</title>
     <meta charset='utf-8'>
     <meta content='IE=edge' http-equiv='X-UA-Compatible'>
     <!-- %meta{name: 'viewport', content: 'width=980'} -->
@@ -32,9 +32,6 @@
     <script src='assets/javascripts/application.js'></script>
     <script src='assets/javascripts/project.js'></script>
     <!-- endbuild -->
-    <style>
-      .demo{margin-left:6rem}.demo li:not(:last-child){margin-bottom:1rem}.demo ol{counter-reset:list}.demo ol li{position:relative}.demo ol li::before{counter-increment:list;content:counter(list)'.';position:absolute;top:0;right:100%;margin-right:.5rem;color:#ccc}
-    </style>
   </head>
   <body class='page' id='page'>
     <style>
@@ -48,57 +45,41 @@
       <div class='alert-ie' role='alert'><p>
           Использование устаревшего браузера<br>повышает риск взлома вашего компьютера.<br><a href='http://browsehappy.com/' rel='nofollow' target='_blank'>Обновите свой браузер!</a></p></div>
     <![endif]-->
-    <main class='main' id='main' role='main'>
-      <section aria-label='Demo' role='region'>
-        <div class='pt-8 pb-8'>
-          <div class='ctn'>
-            <article>
-              <header class='mb-4'>
-                <h1>
-                  <a href='index.html'>Продом</a>
-                </h1>
-              </header>
-              <nav class='demo'>
-                <ol>
-                  <li>
-                    <a class='tx-muted' href='index.html'>Главная</a>
-                  </li>
-                  <li>
-                    <a class='tx-muted' href='catalog.html'>Предложения</a>
-                  </li>
-                  <li>
-                    <a class='tx-muted' href='catalog_show.html'>Предложение</a>
-                  </li>
-                  <li>
-                    <a href='favorites.html'>Избранное</a>
-                  </li>
-                  <li>
-                    <a class='tx-muted' href='search.html'>Поиск</a>
-                  </li>
-                  <li>
-                    <a class='tx-muted' href='news.html'>Новости</a>
-                  </li>
-                  <li>
-                    <a class='tx-muted' href='news_show.html'>Новость</a>
-                  </li>
-                  <li>
-                    <a href='about.html'>О компании</a>
-                  </li>
-                  <li>
-                    <a class='tx-muted' href='services.html'>Услуги</a>
-                  </li>
-                  <li>
-                    <a class='tx-muted' href='contacts.html'>Контакты</a>
-                  </li>
-                  <li>
-                    <a class='tx-muted' href='404.html'>404</a>
-                  </li>
-                </ol>
-              </nav>
-            </article>
+    <header class='header' id='header' role='banner'>
+      <div class='cf'>
+        <div class='f-l'>
+          <div class='search-toggle'></div>
+        </div>
+        <div class='f-r'>
+          <div class='callback'><div class='callback_label'>Обратный звонок</div><div class='callback_phone'>+7 (499) 705 70 08</div>
           </div>
         </div>
-      </section>
+        <div class='f-r'>
+          <div class='like-toggle'></div>
+        </div>
+      </div>
+    </header>
+    <main class='main' id='main' role='main'>
+      <aside class='sidebar' id='sidebar'>
+        <a class='logo' href='index.html'>
+          <img alt='Продом' class='logo_img' height='82' src='assets/images/logo.svg' width='86'>
+          <p class='logo_tx'>Агентство недвижимости</p>
+        </a>
+        <nav class='main-nav' role='navigation'>
+          <a class='main-nav_i main-nav_i__current' href='#'>Загородная</a>
+          <a class='main-nav_i' href='#'>Городская</a>
+          <a class='main-nav_i' href='#'>Коммерческая</a>
+        </nav>
+        <nav class='sub-nav'>
+          <a class='sub-nav_i sub-nav_i__current' href='#'>Новости</a>
+          <a class='sub-nav_i' href='#'>О компании</a>
+          <a class='sub-nav_i' href='#'>Контакты</a>
+        </nav>
+        <a class='request' href='#'>Оставить заявку</a>
+      </aside>
     </main>
+    <footer class='footer' id='footer' role='contentinfo'>
+      <div class='ctn'></div>
+    </footer>
   </body>
 </html>

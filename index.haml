@@ -17,11 +17,11 @@
       /       .index-promo_caption_t Жилые дома с&nbsp;восхитительной архитектурой в&nbsp;экологически чистом районе
       /       .index-promo_caption_tx 9 предложений
 
-      %section{role: 'region', aria: {label: 'Best offers'}}
-        .ctn.pt-4
+      / %section{role: 'region', aria: {label: 'Best offers'}}
+      /   .ctn.pt-4
 
-          .items.js-carousel-items
-            - 1.upto(4) do
-              = Haml::Engine.new(File.read('views/common/_item.haml')).render                
+      /     .items.js-carousel-items
+      /       - 1.upto(4) do
+      /         = Haml::Engine.new(File.read('views/common/_item.haml')).render                
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
