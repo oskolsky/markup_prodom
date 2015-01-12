@@ -41,9 +41,9 @@
 }
 
 @function image-url($path) {
-  @return url(/assets/images/#{$path});
+  @return url(../images/#{$path});
 }
 
 @function font-url($path) {
-  @return url(/assets/fonts/#{$path});
+  @return url(../fonts/#{$path});
 }
