@@ -6,9 +6,45 @@
   
   %body#page.page
     = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
-    = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_header_favorites.haml')).render
 
     %main#main.main{role: 'main'}      
       = Haml::Engine.new(File.read('views/layouts/_sidebar.haml')).render
+
+      %section{role: 'region', aria: {label: 'My favorites'}}
+        .ctn.pt-4.pb-6
+
+          .grid
+            .grid_i.grid_i__desktop-grid-8-12.grid_i__tablet-grid-1-1.grid_i__phone-grid-1-1
+
+              %nav.mb-4
+                %ul.page-nav
+                  %li.page-nav_i>
+                    %a.page-nav_i_a.page-nav_i_a__current{href: 'services.html'} Услуги
+                  %li.page-nav_i
+                    %a.page-nav_i_a{href: 'about.html'} О компании
+                %ul.sub-page-nav
+                  %li.sub-page-nav_i>
+                    %a.sub-page-nav_i_a.sub-page-nav_i_a__current{href: '#'} Риэлторские услуги
+                  %li.sub-page-nav_i>
+                    %a.sub-page-nav_i_a{href: '#'} Консультационные услуги
+                  %li.sub-page-nav_i>
+                    %a.sub-page-nav_i_a{href: '#'} Юридические услуги
+                  %li.sub-page-nav_i>
+                    %a.sub-page-nav_i_a{href: '#'} Управление девелоперскими проектами
+                  %li.sub-page-nav_i>
+                    %a.sub-page-nav_i_a{href: '#'} Эксплуатация недвижимости
+                  %li.sub-page-nav_i>
+                    %a.sub-page-nav_i_a{href: '#'} Постановка офиса продаж &laquo;под ключ&raquo;
+                  %li.sub-page-nav_i>
+                    %a.sub-page-nav_i_a{href: '#'} Инвестиционный брокеридж
+
+              %article.cnt
+                %h1 Услуги
+                %p Прежде всего&nbsp;&mdash; уют. Больших комнат в&nbsp;английском доме немного, как правило, не&nbsp;более двух. Холл, вокруг которого расположены все помещения первого этажа, включая &laquo;great room&raquo;- место, где встречают гостей и&nbsp;собираются всей семьёй. Другие помещения в&nbsp;доме&nbsp;&mdash; компактные, но&nbsp;не&nbsp;тесные. Такие, чтобы создавалось ощущение мягкого комфорта.
+
+              .grid
+                .grid_i.grid_i__desktop-grid-3-8>
+                .grid_i.grid_i__desktop-grid-5-8>
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

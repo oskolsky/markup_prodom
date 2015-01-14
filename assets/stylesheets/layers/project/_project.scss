@@ -520,6 +520,7 @@
 // .. Page navigation
 //
 .page-nav {
+  margin-bottom: 1rem;
   padding-top: 2rem;
   border-bottom: 1px solid #ddd;
 }
@@ -569,7 +570,8 @@
       font-family: $font-opensans;
       font-size: 1rem;
       font-weight: 600;
-      line-height: 5.6rem;
+      line-height: 1.8rem;
+      letter-spacing: .25pt;
       text-transform: uppercase;
       color: #999;
       &:hover {
