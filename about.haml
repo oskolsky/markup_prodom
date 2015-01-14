@@ -13,8 +13,24 @@
 
       %section{role: 'region', aria: {label: 'My favorites'}}
         .ctn.pt-4.pb-6
+
           .grid
             .grid_i.grid_i__desktop-grid-8-12.grid_i__tablet-grid-1-1.grid_i__phone-grid-1-1
+
+              %nav.mb-3
+                %ul.page-nav
+                  %li.page-nav_i>
+                    %a.page-nav_i_a{href: 'services.html'} Услуги
+                  %li.page-nav_i
+                    %a.page-nav_i_a.page-nav_i_a__current{href: 'about.html'} О компании
+                %ul.sub-page-nav
+                  %li.sub-page-nav_i>
+                    %a.sub-page-nav_i_a.sub-page-nav_i_a__current{href: '#'} История компании
+                  %li.sub-page-nav_i>
+                    %a.sub-page-nav_i_a{href: '#'} Направления и профиль деятельности
+                  %li.sub-page-nav_i>
+                    %a.sub-page-nav_i_a{href: '#'} Партнеры
+
               %article.cnt
                 %h1 История компании
                 %blockquote

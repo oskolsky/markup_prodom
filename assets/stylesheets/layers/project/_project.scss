@@ -17,6 +17,19 @@
 
 //****************************************************************************************************
 //
+// .. PAGE
+//
+//****************************************************************************************************
+.page {
+  &__bg {
+    background-color: #f0efed; 
+  }
+}
+
+
+
+//****************************************************************************************************
+//
 // .. HEADER
 //
 //****************************************************************************************************
@@ -37,16 +50,16 @@
   @include mq(desktop) {
 
   }  
-}
-.header__sticky {
-  .no-touch & {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 999;
-    background-color: $base-bg;
-    box-shadow: .1em .1em .3em rgba(0,0,0,.25);
+  &__sticky {
+    .no-touch & {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 999;
+      background-color: $base-bg;
+      box-shadow: .1em .1em .3em rgba(0,0,0,.25);
+    }
   }
 }
 
@@ -109,14 +122,14 @@
     }
 
   //
-  // .. Clean favorites
+  // .. Action
   //
-  .clean-favorites {
+  .header-action {
     font-family: $font-opensans;
     font-size: 1rem;
     font-weight: 600;
     display: inline-block;
-    margin-left: 3rem;
+    margin-left: 3.5rem;
     vertical-align: top;
     letter-spacing: 1pt;
     text-transform: uppercase;
@@ -216,9 +229,9 @@
         background-color: #333;
       }
     }
-  }
-  .main-nav_i__current {
-    background-color: #212121;
+    &__current {
+      background-color: #212121;
+    }
   }
 
 //
@@ -242,9 +255,9 @@
         background-color: #333;
       }
     }
-  }
-  .sub-nav_i__current {
-    background-color: #212121;
+    &__current {
+      background-color: #212121;
+    }
   }
 
 //
@@ -412,7 +425,15 @@
 //
 //****************************************************************************************************
 .footer {
+  @include mq(phone) {
+    display: none;
+  }
+  @include mq(tablet) {
+    display: none;    
+  }
+  @include mq(desktop) {
 
+  }
 }
 
 
@@ -494,3 +515,67 @@
       color: #999;
     }
   }
+
+//
+// .. Page navigation
+//
+.page-nav {
+  padding-top: 2rem;
+  border-bottom: 1px solid #ddd;
+}
+  .page-nav_i {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+    .page-nav_i_a {
+      font-family: $font-opensans;
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 5.2rem;
+      position: relative;
+      display: block;
+      letter-spacing: .5pt;
+      text-transform: uppercase;
+      color: #999;
+      &:hover {
+        color: $base-color;
+      }
+      &__current {
+        color: $base-color;
+        &::after {
+          position: absolute;
+          right: 0;
+          bottom: -1px;
+          left: 0;
+          height: 1px;
+          content: '';
+          background-color: $base-color;
+        }
+      }
+    }
+
+.sub-page-nav {
+
+}
+  .sub-page-nav_i {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+    .sub-page-nav_i_a {
+      font-family: $font-opensans;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 5.6rem;
+      text-transform: uppercase;
+      color: #999;
+      &:hover {
+        color: $base-color;
+      }
+      &__current {
+        color: $base-color;
+      }
+    }
