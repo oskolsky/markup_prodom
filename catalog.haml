@@ -6,9 +6,21 @@
   
   %body#page.page
     = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
-    = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_header_catalog.haml')).render
 
     %main#main.main{role: 'main'}      
       = Haml::Engine.new(File.read('views/layouts/_sidebar.haml')).render
+
+      %section{role: 'region', aria: {label: 'My favorites'}}
+        .ctn.pt-4.pb-6
+
+          .items
+            .mb-6
+              .grid
+                - 1.upto(4) do
+                  .grid_i.grid_i__desktop-grid-1-2.grid_i__tablet-grid-1-2.grid_i__phone-grid-1-1>
+                    = Haml::Engine.new(File.read('views/common/_item.haml')).render
+
+            = Haml::Engine.new(File.read('views/common/_load_more.haml')).render
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
