@@ -25,6 +25,15 @@ $(function() {
     margin: 10,
     mouseDrag: false
   });
+
+  //
+  // .. Masonry init
+  //
+  $('.js-feed').imagesLoaded( function() {
+    $('.js-feed').masonry({
+      itemSelector: '.js-feed-item'
+    });
+  });
  
 
 

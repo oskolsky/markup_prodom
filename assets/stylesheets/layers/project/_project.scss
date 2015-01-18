@@ -25,6 +25,14 @@
     background-color: #f0efed; 
   }
 }
+.page-title {
+  font-size: 1.2rem;
+  line-height: 3rem;
+  text-align: center;
+  letter-spacing: 1.8pt;
+  text-transform: uppercase;
+  color: #818181;
+}
 
 
 
@@ -113,7 +121,7 @@
       margin-right: 3rem;
       letter-spacing: .75pt;
       text-transform: uppercase;
-      color: #999;
+      color: $muted-color;
     }
     .callback_phone {
       font-size: 1.3rem;
@@ -133,9 +141,9 @@
     vertical-align: top;
     letter-spacing: .75pt;
     text-transform: uppercase;
-    color: #999;
+    color: $muted-color;
     &:hover {
-      color: #999;  
+      color: $muted-color;  
     }
   }
 
@@ -224,7 +232,6 @@
     }
     &:hover {
       color: #fefefe;
-      
       &:not(.main-nav_i__current) {
         background-color: #333;
       }
@@ -396,6 +403,10 @@
       font-weight: 700;
       font-style: italic;
       line-height: 2.6rem;
+      color: $base-color;
+      &:hover {
+        color: $base-color;        
+      }
     }
   .item_body {
     font-family: $font-opensans;
@@ -411,11 +422,104 @@
     .item_summary {
       font-size: 1.3rem;
       line-height: 2.1rem;
-      color: #999;
+      color: $muted-color;
     }
       .item_summary_i {
 
       }
+
+
+
+//****************************************************************************************************
+//
+// .. NEWS ITEM
+//
+//****************************************************************************************************
+.news-item {
+  background-color: #fff;
+}
+  .news-item_header {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    position: relative;
+    padding: 3rem 3rem 1rem;
+    &::after {
+      position: absolute;
+      right: 3rem;
+      bottom: 0;
+      left: 3rem;
+      height: 1px;
+      content: '';
+      background-color: #d9d9d9;
+    }
+    a {
+      color: $base-color;
+      &:hover {
+        color: $base-color;
+      }
+    }
+  }
+    .news-item_source {
+      font-family: $font-opensans;
+      font-size: 1.2rem;
+      text-align: right;
+      > a {
+        color: $muted-color;
+        &:hover {
+          color: $muted-color;          
+        }
+        > span, > img {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        > span {
+          margin-right: 1rem;
+        }
+      }
+    }
+  .news-item_body {
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 2rem;
+    position: relative;
+    padding: 1.5rem 3rem 3.5rem 9.5rem;
+  }
+  .news-item_author {
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+  }
+
+
+
+//****************************************************************************************************
+//
+// .. NEWS COMPANY
+//
+//****************************************************************************************************
+.news-company {
+  padding: 2rem 3rem 3rem;
+  background-color: #fff;
+}
+  .news-company_title {
+    margin-bottom: 2rem;
+    @extend .page-title;
+  }
+  .news-company_item {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: 2rem 0 2.5rem;
+    border-bottom: 1px solid #d9d9d9;
+    &:first-child {
+      border-top: 1px solid #d9d9d9;      
+    }
+    a {
+      color: $base-color;
+      &:hover {
+        color: $base-color;
+      }
+    }
+  }
 
 
 
@@ -430,12 +534,6 @@
   border-top: 1px solid #ddd;
   &:last-child {
     border-bottom: 1px solid #ddd;    
-  }
-  a {
-    color: #a99a7e;
-    &:hover {
-      color: #a99a7e;
-    }
   }
 }
   .services-item_header {
@@ -501,10 +599,6 @@
         font-weight: 600;
         letter-spacing: .75pt;
         text-transform: uppercase;
-        color: #a99a7e;
-        &:hover {
-          color: #a99a7e;          
-        }
       }
   .footer_phone {
     font-size: 1.3rem;
@@ -585,14 +679,14 @@
     text-align: center;
     letter-spacing: .75pt;
     text-transform: uppercase;
-    color: #999;
+    color: $muted-color;
     border: 1px solid #d9d9d9;
     border-radius: .3rem;
     @include prefixes(box-sizing, border-box);
     &:hover {
       color: #fff;
-      border-color: #a99a7e;
-      background-color: #a99a7e;
+      border-color: $link-color;
+      background-color: $link-color;
     }
   }
 
@@ -619,7 +713,7 @@
       display: block;
       letter-spacing: .5pt;
       text-transform: uppercase;
-      color: #999;
+      color: $muted-color;
       &:hover {
         color: $base-color;
       }
@@ -653,7 +747,7 @@
       line-height: 1.8rem;
       letter-spacing: .25pt;
       text-transform: uppercase;
-      color: #999;
+      color: $muted-color;
       &:hover {
         color: $base-color;
       }
