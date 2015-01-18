@@ -39,12 +39,21 @@
                   %li.sub-page-nav_i>
                     %a.sub-page-nav_i_a{href: '#'} Инвестиционный брокеридж
 
-              %article.cnt
+              %article.cnt.mb-5
                 %h1 Услуги
                 %p Прежде всего&nbsp;&mdash; уют. Больших комнат в&nbsp;английском доме немного, как правило, не&nbsp;более двух. Холл, вокруг которого расположены все помещения первого этажа, включая &laquo;great room&raquo;- место, где встречают гостей и&nbsp;собираются всей семьёй. Другие помещения в&nbsp;доме&nbsp;&mdash; компактные, но&nbsp;не&nbsp;тесные. Такие, чтобы создавалось ощущение мягкого комфорта.
 
-              .grid
-                .grid_i.grid_i__desktop-grid-3-8>
-                .grid_i.grid_i__desktop-grid-5-8>
+              - 1.upto(3) do |i|
+                .services-item
+                  .grid
+                    .grid_i.grid_i__middle.grid_i__desktop-grid-3-8.grid_i__tablet-grid-1-1.grid_i__phone-grid-1-1>
+                      .tx-center
+                        %img.va-t{src: "assets/images/services_#{i}.jpg"}
+                    .grid_i.grid_i__middle.grid_i__desktop-grid-5-8.grid_i__tablet-grid-1-1.grid_i__phone-grid-1-1>
+                      %article
+                        %header.services-item_header Номос Банк
+                        %p Управленческое, финансовое, правовое и&nbsp;инвестиционное консультирование
+                        %footer
+                          %a{href: '#'} www.nomos.ru
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
