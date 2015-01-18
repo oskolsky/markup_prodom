@@ -1,7 +1,7 @@
 !!!
 %html.no-js{lang: 'ru-RU'}
   %head
-    %title Продом
+    %title UI / Продом
     = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
   
   %body#page.page
@@ -10,3 +10,17 @@
     %main#main.main{role: 'main'}
       %section{role: 'region', aria: {label: 'Icons'}}
         .ctn
+          .pt-4.pb-4
+
+            .mb-2
+              %i.ico.ico__16.ico__search
+              %i.ico.ico__16.ico__star
+              %i.ico.ico__16.ico__tw
+              %i.ico.ico__16.ico__vk
+              %i.ico.ico__16.ico__fb
+            %div
+              %i.ico.ico__32.ico__search
+              %i.ico.ico__32.ico__star
+              %i.ico.ico__32.ico__tw
+              %i.ico.ico__32.ico__vk
+              %i.ico.ico__32.ico__fb            
