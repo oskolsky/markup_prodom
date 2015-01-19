@@ -19,7 +19,7 @@
           .grid
             .grid_i.grid_i__desktop-grid-2-3.grid_i__tablet-grid-1-2.grid_i__phone-grid-1-1>
               .grid.js-feed
-                - 1.upto(2) do |i|
+                - 1.upto(2) do
                   .grid_i.grid_i__desktop-grid-1-2.grid_i__tablet-grid-1-1.grid_i__phone-grid-1-1.js-feed-item>
                     = Haml::Engine.new(File.read('views/common/_news_without_photos.haml')).render
                   .grid_i.grid_i__desktop-grid-1-2.grid_i__tablet-grid-1-1.grid_i__phone-grid-1-1.js-feed-item>
