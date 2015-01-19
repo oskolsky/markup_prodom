@@ -1,0 +1,31 @@
+!!!
+%html.no-js{lang: 'ru-RU'}
+  %head
+    %title Услуги / Поиск / Продом
+    = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
+  
+  %body#page.page
+    = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
+
+    %main#main.main{role: 'main'}      
+      = Haml::Engine.new(File.read('views/layouts/_sidebar.haml')).render
+
+      %section{role: 'region', aria: {label: 'Search catalog'}}
+        .ctn.pt-3.pb-6
+
+          .search
+            %form.search-form
+              %input.search-form_input{type: 'search', placeholder: 'Поиск'}
+              %button.search-form_submit{type: 'submit'}
+
+          .search-result
+            - 1.upto(3) do |i|
+              .services-item
+                %article
+                  %header.services-item_header Номос Банк
+                  %p Управленческое, финансовое, правовое и&nbsp;инвестиционное консультирование
+                  %footer
+                    %a{href: '#'} Управление девелоперскими проектами
+
+    = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

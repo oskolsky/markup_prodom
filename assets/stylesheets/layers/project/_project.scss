@@ -437,6 +437,9 @@
 //****************************************************************************************************
 .news-item {
   background-color: #fff;
+  .search-result & {
+    background-color: #f5f4f2;
+  }
 }
   .news-item_header {
     font-size: 1.6rem;
@@ -529,7 +532,7 @@
 //
 //****************************************************************************************************
 .services-item {
-  padding: 3.5rem 0 6rem;
+  padding: 3.5rem 0;
   font-size: 1.6rem;
   border-top: 1px solid #ddd;
   &:last-child {
@@ -541,6 +544,95 @@
     font-weight: 600;
     margin-bottom: 1rem;
   }
+
+
+
+//****************************************************************************************************
+//
+// .. SEARCH
+//
+//****************************************************************************************************
+.search {
+
+}
+
+//
+// .. Form search
+//
+.search-form {
+  position: relative;
+  margin-bottom: 2rem;
+}
+  .search-form_input {
+    font-family: $font-opensans;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 6rem;
+    display: block;
+    width: 100%;
+    height: 6rem;
+    padding: 0 10rem 0 3rem;
+    background-color: #f7f7f7;
+    @include prefixes(box-sizing, border-box);
+  }
+  .search-form_submit {
+    font-size: 2.2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 7rem;
+    cursor: pointer;
+    background-image: image-url('search.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+//
+// .. Search navigation
+//
+.search-nav {
+
+}
+  .search-nav_i {
+    display: inline-block;
+    vertical-align: top;
+  }
+    .search-nav_i_a {
+      font-family: $font-opensans;
+      font-size: 1.4rem;
+      line-height: 4rem;
+      display: block;
+      height: 4rem;
+      padding: 0 1.5rem;
+      border-radius: .3rem;
+      &__current {
+        color: #fff;
+        background-color: #454545;
+        &:hover {
+          color: #fff;          
+        }
+      }
+      &__active {
+        color: #808080;
+        &:hover {
+          color: #808080;          
+        }
+      }
+      &__muted {
+        color: #bfbfbf;
+        &:hover {
+          color: #bfbfbf;
+        }
+      }
+    }
+
+//
+// .. Result
+//
+.search-result {
+
+}
 
 
 
@@ -657,7 +749,7 @@
     &:hover {
       color: #808080;
     }
-    &__main & {
+    .tags__main & {
       border-top: .2rem solid;
     }
   }

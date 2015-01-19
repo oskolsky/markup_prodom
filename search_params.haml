@@ -1,0 +1,39 @@
+!!!
+%html.no-js{lang: 'ru-RU'}
+  %head
+    %title Параметры / Поиск / Продом
+    = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
+  
+  %body#page.page
+    = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
+    = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
+
+    %main#main.main{role: 'main'}      
+      = Haml::Engine.new(File.read('views/layouts/_sidebar.haml')).render
+
+      %section{role: 'region', aria: {label: 'Search params'}}
+        .ctn.pt-3.pb-6
+
+          .search
+            %form.search-form
+              %input.search-form_input{type: 'search', placeholder: 'Поиск'}
+              %button.search-form_submit{type: 'submit'}
+
+            / %nav
+            /   %ul.search-nav
+            /     %li.search-nav_i>
+            /       %a.search-nav_i_a.search-nav_i_a__current{href: 'search_catalog.html'} Все предложения
+            /     %li.search-nav_i>
+            /       %a.search-nav_i_a.search-nav_i_a__active{href: 'search_catalog.html'} Загородная недвижимость
+            /     %li.search-nav_i>
+            /       %a.search-nav_i_a.search-nav_i_a__muted{href: 'search_catalog.html'} Городская недвижимость
+            /     %li.search-nav_i>
+            /       %a.search-nav_i_a.search-nav_i_a__muted{href: 'search_catalog.html'} Коммерческая недвижимость
+            /     %li.search-nav_i>
+            /       %a.search-nav_i_a.search-nav_i_a__muted{href: 'search_params.html'} Параметры
+            /     %li.search-nav_i>
+            /       %a.search-nav_i_a.search-nav_i_a__muted{href: 'search_news.html'} Новости
+            /     %li.search-nav_i
+            /       %a.search-nav_i_a.search-nav_i_a__muted{href: 'search_services.html'} Услуги
+
+    = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
