@@ -437,7 +437,7 @@
 //****************************************************************************************************
 .news-item {
   background-color: #fff;
-  .search-result & {
+  .section__invert & {
     background-color: #f5f4f2;
   }
 }
@@ -503,6 +503,12 @@
 .news-company {
   padding: 2rem 3rem 3rem;
   background-color: #fff;
+  &__home {
+    padding-bottom: 2.2rem;
+  }
+  .section__invert & {
+    background-color: #f5f4f2;
+  }
 }
   .news-company_title {
     margin-bottom: 2rem;
@@ -515,6 +521,11 @@
     border-bottom: 1px solid #d9d9d9;
     &:first-child {
       border-top: 1px solid #d9d9d9;      
+    }
+    .news-company__home & {
+      &:last-child {
+        border-bottom: none;
+      }
     }
     a {
       color: $base-color;
