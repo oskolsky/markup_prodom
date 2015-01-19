@@ -4366,6 +4366,8 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 
 .news-item {
   background-color: #fff; }
+  .search-result .news-item {
+    background-color: #f5f4f2; }
 
 .news-item_header {
   font-size: 1.6rem;
@@ -4431,7 +4433,7 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
       color: #1a1a1a; }
 
 .services-item {
-  padding: 3.5rem 0 6rem;
+  padding: 3.5rem 0;
   font-size: 1.6rem;
   border-top: 1px solid #ddd; }
   .services-item:last-child {
@@ -4441,6 +4443,64 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   margin-bottom: 1rem; }
+
+.search-form {
+  position: relative;
+  margin-bottom: 2rem; }
+
+.search-form_input {
+  font-family: "Open Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 6rem;
+  display: block;
+  width: 100%;
+  height: 6rem;
+  padding: 0 10rem 0 3rem;
+  background-color: #f7f7f7;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.search-form_submit {
+  font-size: 2.2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 7rem;
+  cursor: pointer;
+  background-image: url(../images/search.png);
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.search-nav_i {
+  display: inline-block;
+  vertical-align: top; }
+
+.search-nav_i_a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+  line-height: 4rem;
+  display: block;
+  height: 4rem;
+  padding: 0 1.5rem;
+  border-radius: .3rem; }
+  .search-nav_i_a__current {
+    color: #fff;
+    background-color: #454545; }
+    .search-nav_i_a__current:hover {
+      color: #fff; }
+  .search-nav_i_a__active {
+    color: #808080; }
+    .search-nav_i_a__active:hover {
+      color: #808080; }
+  .search-nav_i_a__muted {
+    color: #bfbfbf; }
+    .search-nav_i_a__muted:hover {
+      color: #bfbfbf; }
 
 @media all and (max-width: 639px) {
   .footer {
@@ -4531,7 +4591,7 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
   background-color: #f2f2f2; }
   .tags_i:hover {
     color: #808080; }
-  .tags_i__main .tags_i {
+  .tags__main .tags_i {
     border-top: .2rem solid; }
 
 .load-more {
