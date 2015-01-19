@@ -17,7 +17,7 @@
           .items
             .mb-6
               .grid
-                - 1.upto(4) do
+                - 1.upto(6) do
                   .grid_i.grid_i__desktop-grid-1-2.grid_i__tablet-grid-1-2.grid_i__phone-grid-1-1>
                     = Haml::Engine.new(File.read('views/common/_item.haml')).render
 
