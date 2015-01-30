@@ -11,4 +11,91 @@
     %main#main.main{role: 'main'}      
       = Haml::Engine.new(File.read('views/layouts/_sidebar.haml')).render
 
+      %section.section.section__invert{role: 'region', aria: {label: 'News show'}}
+        .ctn.pt-4.pb-6
+
+          .grid
+            .grid_i.grid_i__desktop-grid-8-12.grid_i__tablet-grid-1-1.grid_i__phone-grid-1-1
+
+              %article.mb-1
+                %header.mb-4
+                  %p.post-date 14 сентября 2014
+                  %h1 Новая техника для земляных работ: производительная, экономичная, &laquo;зеленая&raquo;
+                %div.cnt
+                  %img{src: "assets/images/news_show_photo.jpg", width: "100%", alt: ""}
+                  %p Прежде всего&nbsp;&mdash; уют. Больших комнат в&nbsp;английском доме немного, как правило, не&nbsp;более двух. Холл, вокруг которого расположены все помещения первого этажа, включая &laquo;great room&raquo;- место, где встречают гостей и&nbsp;собираются всей семьёй. Другие помещения в&nbsp;доме&nbsp;&mdash; компактные, но&nbsp;не&nbsp;тесные. Такие, чтобы создавалось ощущение мягкого комфорта.
+                  %p 
+                    %mark Такие, чтобы создавалось ощущение мягкого комфорта.
+                  %p Прежде всего&nbsp;&mdash; уют. Больших комнат в&nbsp;английском доме немного, как правило, не&nbsp;более двух. Холл, вокруг которого расположены все помещения первого этажа, включая &laquo;great room&raquo;- место, где встречают гостей и&nbsp;собираются всей семьёй.
+                  %p 
+                    %b Другие помещения в&nbsp;доме&nbsp;&mdash; компактные, но&nbsp;не&nbsp;тесные.
+                  %p Кроме того, существуют правила оформления списков:
+                  %ol
+                    %li Если пункты списка длинные и&nbsp;представляют собой 
+                    %li Если пункты списка длинные и&nbsp;представляют собой развернутые предложения, они должны начинаться с&nbsp;прописной буквы и&nbsp;заканчиваться точкой.
+                  %ul
+                    %li Если пункты списка короткие, не&nbsp;являются самостоятельной законченной конструкцией и&nbsp;грамматически тесно связаны с&nbsp;предшествующей списку вводной фразой, они должны начинаться со&nbsp;строчной буквы и&nbsp;заканчиваться точкой с&nbsp;запятой (в&nbsp;конце последнего пункта&nbsp;&mdash; точка).
+                    %li Если пункты списка длинные и&nbsp;представляют собой развернутые предложения, они должны начинаться с&nbsp;прописной буквы и&nbsp;заканчиваться точкой.
+                %footer
+                  %p.source
+                    %span
+                      Источник:
+                      &nbsp;
+                      %a{href: "#"} Lenta.ru
+                    &nbsp;
+                    %img{src: "assets/images/news_source.png", width: "16", height: "16", alt: "Lenta.ru"}
+
+              %hr.hr.mb-5
+
+              %div.expert.mb-5
+                %div.expert_title Комментарий эксперта
+                %div.expert_photo
+                  %img{src: "assets/images/expert_photo.jpg", width: 93, height: 93, alt: "Константин Звенигородский"}
+                %div.expert_inner
+                  %div.expert_person
+                    %p.expert_person_name Константин Звенигородский
+                    %p.expert_person_post Аналитик рынка недвижимости
+                  %article.cnt
+                    %p Прежде всего&nbsp;&mdash; уют. Больших комнат в&nbsp;английском доме немного, как правило, не&nbsp;более двух. Холл, вокруг которого расположены все помещения первого этажа, включая &laquo;great room&raquo;- место, где встречают гостей и&nbsp;собираются всей семьёй. Другие помещения в&nbsp;доме&nbsp;&mdash; компактные, но&nbsp;не&nbsp;тесные. Такие, чтобы создавалось ощущение мягкого комфорта.
+                    %p 
+                      %mark Такие, чтобы создавалось ощущение мягкого комфорта.
+                    %p Прежде всего&nbsp;&mdash; уют. Больших комнат в&nbsp;английском доме немного, как правило, не&nbsp;более двух. Холл, вокруг которого расположены все помещения первого этажа, включая &laquo;great room&raquo;- место, где встречают гостей и&nbsp;собираются всей семьёй.
+                    %p 
+                      %b Другие помещения в&nbsp;доме&nbsp;&mdash; компактные, но&nbsp;не&nbsp;тесные.
+                    %p Кроме того, существуют правила оформления списков:
+                    %ol
+                      %li Если пункты списка длинные и&nbsp;представляют собой 
+                      %li Если пункты списка длинные и&nbsp;представляют собой развернутые предложения, они должны начинаться с&nbsp;прописной буквы и&nbsp;заканчиваться точкой.
+                    %ul
+                      %li Если пункты списка короткие, не&nbsp;являются самостоятельной законченной конструкцией и&nbsp;грамматически тесно связаны с&nbsp;предшествующей списку вводной фразой, они должны начинаться со&nbsp;строчной буквы и&nbsp;заканчиваться точкой с&nbsp;запятой (в&nbsp;конце последнего пункта&nbsp;&mdash; точка).
+                      %li Если пункты списка длинные и&nbsp;представляют собой развернутые предложения, они должны начинаться с&nbsp;прописной буквы и&nbsp;заканчиваться точкой.
+
+              %hr.hr.mb-3
+
+              %div.tx-center.mb-6
+                .social-likes
+                  .facebook{title: "Поделиться ссылкой на Фейсбуке"} Facebook
+                  .twitter{title: "Поделиться ссылкой в Твиттере"} Twitter
+                  .vkontakte{title: "Поделиться ссылкой во Вконтакте"} Вконтакте
+
+              %p.page-title.page-title__l.mb-3 Другие новости
+
+              %div.mb-3
+                .grid.js-feed
+                  .grid_i.grid_i__desktop-grid-1-2.grid_i__tablet-grid-1-1.grid_i__phone-grid-1-1.js-feed-item>
+                    = Haml::Engine.new(File.read('views/common/_news_without_photos.haml')).render
+                  .grid_i.grid_i__desktop-grid-1-2.grid_i__tablet-grid-1-1.grid_i__phone-grid-1-1.js-feed-item>
+                    .news-company.news-company__short
+                      %p.news-company_title Новости компании
+                      %div
+                        .news-company_item
+                          %p
+                            %a{href: 'news_show.html'} Новая техника для земляных работ: производительная, экономичная, &laquo;зеленая&raquo;
+                            %i.tx-muted 14 сентября 2014
+
+              %p.go-to-back
+                %a{href: "news.html"}
+                  %img{src: "assets/images/arrow.svg", width: "12", height: "5", alt: ""}>
+                  К списку новостей
+
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

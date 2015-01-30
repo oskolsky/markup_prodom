@@ -31,6 +31,7 @@
       "assets/javascripts/vendor/owl.carousel.js",
       "assets/javascripts/vendor/imagesloaded.pkgd.js",
       "assets/javascripts/vendor/masonry.pkgd.js",
+      "assets/javascripts/vendor/social-likes.min.js",
       "assets/javascripts/config.js",
       "assets/javascripts/jquery.extensions.js",
       "assets/javascripts/helpers.js",
