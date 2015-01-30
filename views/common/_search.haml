@@ -1,0 +1,30 @@
+.search
+  %form.search-form
+    %input.search-form_input{type: 'search', placeholder: 'Поиск'}
+    %button.search-form_submit{type: 'submit'}
+
+  %nav
+    %ul.search-nav
+      %li.search-nav_i>
+        %a.search-nav_i_a.search-nav_i_a__current{href: 'search_catalog.html'} 
+          %span> Все предложения
+          %span.search-nav_i_a_badge 5
+      %li.search-nav_i>
+        %a.search-nav_i_a.search-nav_i_a__active{href: 'search_catalog.html'}
+          %span> Загородная недвижимость
+          %span.search-nav_i_a_badge 5
+      %li.search-nav_i>
+        %a.search-nav_i_a.search-nav_i_a__muted{href: 'search_catalog.html'} 
+          %span Городская недвижимость
+      %li.search-nav_i>
+        %a.search-nav_i_a.search-nav_i_a__muted{href: 'search_catalog.html'} 
+          %span Коммерческая недвижимость
+      %li.search-nav_i>
+        %a.search-nav_i_a.search-nav_i_a__muted{href: 'search_params.html'} 
+          %span Параметры
+      %li.search-nav_i>
+        %a.search-nav_i_a.search-nav_i_a__muted{href: 'search_news.html'} 
+          %span Новости
+      %li.search-nav_i
+        %a.search-nav_i_a.search-nav_i_a__muted{href: 'search_services.html'} 
+          %span Услуги

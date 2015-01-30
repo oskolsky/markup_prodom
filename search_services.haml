@@ -14,10 +14,7 @@
       %section{role: 'region', aria: {label: 'Search services'}}
         .ctn.pt-3.pb-6
 
-          .search
-            %form.search-form
-              %input.search-form_input{type: 'search', placeholder: 'Поиск'}
-              %button.search-form_submit{type: 'submit'}
+          = Haml::Engine.new(File.read('views/common/_search.haml')).render
 
           .search-result
             - 1.upto(3) do |i|

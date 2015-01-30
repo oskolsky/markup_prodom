@@ -611,7 +611,7 @@
 //
 //****************************************************************************************************
 .search {
-
+  margin-bottom: 2rem;
 }
 
 //
@@ -684,6 +684,24 @@
         }
       }
     }
+      .search-nav_i_a_badge {
+        font-family: $font-opensans;
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-left: 1rem;
+        text-align: center;
+        color: #999;
+        border-radius: 50%;
+        .search-nav_i_a__current & {
+          background-color: #525252;
+        }
+        .search-nav_i_a__active & {
+          background-color: #f2f2f2;
+        }
+      }
 
 //
 // .. Result
