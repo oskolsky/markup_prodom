@@ -16,30 +16,37 @@
 
           %p.page-title.mb-3 Новости за сентябрь
 
-          .grid
-            .grid_i.grid_i__desktop-grid-2-3.grid_i__tablet-grid-1-2.grid_i__phone-grid-1-1>
-              .grid.js-feed
-                - 1.upto(2) do
-                  .grid_i.grid_i__desktop-grid-1-2.grid_i__tablet-grid-1-1.grid_i__phone-grid-1-1.js-feed-item>
-                    = Haml::Engine.new(File.read('views/common/_news_without_photos.haml')).render
-                  .grid_i.grid_i__desktop-grid-1-2.grid_i__tablet-grid-1-1.grid_i__phone-grid-1-1.js-feed-item>
-                    = Haml::Engine.new(File.read('views/common/_news_with_photos.haml')).render
-            .grid_i.grid_i__desktop-grid-1-3.grid_i__tablet-grid-1-2.grid_i__phone-grid-1-1>
-              .news-company
-                %p.news-company_title Новости компании
-                .mb-3
-                  - 1.upto(3) do
+          .mb-4
+            .grid
+              .grid_i.grid_i__desktop-grid-2-3.grid_i__tablet-grid-1-2.grid_i__phone-grid-1-1>
+                .grid.js-feed
+                  - 1.upto(2) do
+                    .grid_i.grid_i__desktop-grid-1-2.grid_i__tablet-grid-1-1.grid_i__phone-grid-1-1.js-feed-item>
+                      = Haml::Engine.new(File.read('views/common/_news_without_photos.haml')).render
+                    .grid_i.grid_i__desktop-grid-1-2.grid_i__tablet-grid-1-1.grid_i__phone-grid-1-1.js-feed-item>
+                      = Haml::Engine.new(File.read('views/common/_news_with_photos.haml')).render
+              .grid_i.grid_i__desktop-grid-1-3.grid_i__tablet-grid-1-2.grid_i__phone-grid-1-1>
+                .news-company
+                  %p.news-company_title Новости компании
+                  .mb-3
+                    - 1.upto(3) do
+                      .news-company_item
+                        %p
+                          %a{href: 'news_show.html'} Новая техника для земляных работ: производительная, экономичная, &laquo;зеленая&raquo;
+                          %i.tx-muted 14 сентября 2014
                     .news-company_item
+                      .mt-1.mb-2
+                        %a{href: 'news_show.html'}
+                          %img.va-t{src: 'assets/images/news_company_photo_1.jpg', width: '100%', alt: 'Новая техника для земляных работ: производительная, экономичная, &laquo;зеленая&raquo;'}
                       %p
                         %a{href: 'news_show.html'} Новая техника для земляных работ: производительная, экономичная, &laquo;зеленая&raquo;
                         %i.tx-muted 14 сентября 2014
-                  .news-company_item
-                    .mt-1.mb-2
-                      %a{href: 'news_show.html'}
-                        %img.va-t{src: 'assets/images/news_company_photo_1.jpg', width: '100%', alt: 'Новая техника для земляных работ: производительная, экономичная, &laquo;зеленая&raquo;'}
-                    %p
-                      %a{href: 'news_show.html'} Новая техника для земляных работ: производительная, экономичная, &laquo;зеленая&raquo;
-                      %i.tx-muted 14 сентября 2014
-                = Haml::Engine.new(File.read('views/common/_load_more.haml')).render
+                  = Haml::Engine.new(File.read('views/common/_load_more.haml')).render
+
+          %ul.news-nav
+            %li.news-nav_i>
+              %a.news-nav_i_a.news-nav_i_a__prev{href: "#"} Август  2014
+            %li.news-nav_i
+              %a.news-nav_i_a.news-nav_i_a__next{href: "#"} Октябрь 2014
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render
