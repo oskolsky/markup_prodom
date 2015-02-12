@@ -3,12 +3,12 @@
   %head
     %title Новости / Продом
     = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
-  
+
   %body#page.page.page__bg
     = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
     = Haml::Engine.new(File.read('views/layouts/_header.haml')).render
 
-    %main#main.main{role: 'main'}      
+    %main#main.main{role: 'main'}
       = Haml::Engine.new(File.read('views/layouts/_sidebar.haml')).render
 
       %section{role: 'region', aria: {label: 'News'}}
@@ -28,7 +28,7 @@
               .grid_i.grid_i__desktop-grid-1-3.grid_i__tablet-grid-1-2.grid_i__phone-grid-1-1>
                 .news-company
                   %p.news-company_title Новости компании
-                  .mb-3
+                  .mb-3.js-news
                     - 1.upto(3) do
                       .news-company_item
                         %p
@@ -41,7 +41,8 @@
                       %p
                         %a{href: 'news_show.html'} Новая техника для земляных работ: производительная, экономичная, &laquo;зеленая&raquo;
                         %i.tx-muted 14 сентября 2014
-                  = Haml::Engine.new(File.read('views/common/_load_more.haml')).render
+                  .load-more.js-news-load
+                    %a.load-more_a{href: '#'} Показать ещё
 
           %ul.news-nav
             %li.news-nav_i>
