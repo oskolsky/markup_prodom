@@ -19,9 +19,9 @@
           %div.search-result
             %div.tags.tags__main.tags__search
               - 1.upto(3) do
-                %a.tags_i{href: '#', style: 'border-color: #a8da9b;'}> Рядом школа
-                %a.tags_i{href: '#', style: 'border-color: #7bcc39;'}> Бассеин
-                %a.tags_i{href: '#', style: 'border-color: #2fc4cd;'}> Лесопарковая зона
-                %a.tags_i{href: '#', style: 'border-color: #ba82cc;'}> Минское шоссе
+                %a.tags_item{href: '#', style: 'border-color: #a8da9b;'}> Рядом школа
+                %a.tags_item{href: '#', style: 'border-color: #7bcc39;'}> Бассеин
+                %a.tags_item{href: '#', style: 'border-color: #2fc4cd;'}> Лесопарковая зона
+                %a.tags_item{href: '#', style: 'border-color: #ba82cc;'}> Минское шоссе
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

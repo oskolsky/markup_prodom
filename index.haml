@@ -14,8 +14,8 @@
       %section{role: 'region', aria: {label: 'Index promo'}}
         .index-promo{style: 'background-image: url(/assets/images/index_promo_1.jpg)'}
           .index-promo_caption
-            .index-promo_caption_t Жилые дома с&nbsp;восхитительной архитектурой в&nbsp;экологически чистом районе
-            .index-promo_caption_tx 9 предложений
+            .index-promo_title Жилые дома с&nbsp;восхитительной архитектурой в&nbsp;экологически чистом районе
+            .index-promo_text 9 предложений
 
       %section.section.section__invert{role: 'region', aria: {label: 'Index'}}
         .ctn.pt-4.pb-6
@@ -44,6 +44,6 @@
                         %a{href: 'news_show.html'} Новая техника для земляных работ: производительная, экономичная, &laquo;зеленая&raquo;
                         %i.tx-muted 14 сентября 2014
                 .load-more
-                  %a.load-more_a{href: '#'} Все новости
+                  %a.load-more_link{href: '#'} Все новости
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

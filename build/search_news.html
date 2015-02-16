@@ -29,7 +29,6 @@
     <script src='assets/javascripts/config.js'></script>
     <script src='assets/javascripts/jquery.extensions.js'></script>
     <script src='assets/javascripts/helpers.js'></script>
-    <script src='assets/javascripts/forms.js'></script>
     <script src='assets/javascripts/feed.js'></script>
     <script src='assets/javascripts/application.js'></script>
     <script src='assets/javascripts/project.js'></script>
@@ -68,14 +67,14 @@
           <p class='logo_tx'>Агентство недвижимости</p>
         </a>
         <nav class='main-nav' role='navigation'>
-          <a class='main-nav_i main-nav_i__current' href='#'>Загородная</a>
-          <a class='main-nav_i' href='#'>Городская</a>
-          <a class='main-nav_i' href='#'>Коммерческая</a>
+          <a class='main-nav_item main-nav_item__current' href='#'>Загородная</a>
+          <a class='main-nav_item' href='#'>Городская</a>
+          <a class='main-nav_item' href='#'>Коммерческая</a>
         </nav>
         <nav class='sub-nav'>
-          <a class='sub-nav_i sub-nav_i__current' href='#'>Новости</a>
-          <a class='sub-nav_i' href='#'>О компании</a>
-          <a class='sub-nav_i' href='#'>Контакты</a>
+          <a class='sub-nav_item sub-nav_item__current' href='#'>Новости</a>
+          <a class='sub-nav_item' href='#'>О компании</a>
+          <a class='sub-nav_item' href='#'>Контакты</a>
         </nav>
         <a class='request' href='#'>Оставить заявку</a>
       </aside>
@@ -87,30 +86,30 @@
               <button class='search-form_submit' type='submit'></button>
             </form>
             <nav>
-              <ul class='search-nav'><li class='search-nav_i'>
-                  <a class='search-nav_i_a search-nav_i_a__current' href='search_catalog.html'><span>Все предложения</span><span class='search-nav_i_a_badge'>5</span>
+              <ul class='search-nav'><li class='search-nav_item'>
+                  <a class='search-nav_link search-nav_link__current' href='search_catalog.html'><span>Все предложения</span><span class='search-nav_link_badge'>5</span>
                   </a>
-                </li><li class='search-nav_i'>
-                  <a class='search-nav_i_a search-nav_i_a__active' href='search_catalog.html'><span>Загородная недвижимость</span><span class='search-nav_i_a_badge'>5</span>
+                </li><li class='search-nav_item'>
+                  <a class='search-nav_link search-nav_link__active' href='search_catalog.html'><span>Загородная недвижимость</span><span class='search-nav_link_badge'>5</span>
                   </a>
-                </li><li class='search-nav_i'>
-                  <a class='search-nav_i_a search-nav_i_a__muted' href='search_catalog.html'>
+                </li><li class='search-nav_item'>
+                  <a class='search-nav_link search-nav_link__muted' href='search_catalog.html'>
                     <span>Городская недвижимость</span>
                   </a>
-                </li><li class='search-nav_i'>
-                  <a class='search-nav_i_a search-nav_i_a__muted' href='search_catalog.html'>
+                </li><li class='search-nav_item'>
+                  <a class='search-nav_link search-nav_link__muted' href='search_catalog.html'>
                     <span>Коммерческая недвижимость</span>
                   </a>
-                </li><li class='search-nav_i'>
-                  <a class='search-nav_i_a search-nav_i_a__muted' href='search_params.html'>
+                </li><li class='search-nav_item'>
+                  <a class='search-nav_link search-nav_link__muted' href='search_params.html'>
                     <span>Параметры</span>
                   </a>
-                </li><li class='search-nav_i'>
-                  <a class='search-nav_i_a search-nav_i_a__muted' href='search_news.html'>
+                </li><li class='search-nav_item'>
+                  <a class='search-nav_link search-nav_link__muted' href='search_news.html'>
                     <span>Новости</span>
                   </a>
-                </li><li class='search-nav_i'>
-                  <a class='search-nav_i_a search-nav_i_a__muted' href='search_services.html'>
+                </li><li class='search-nav_item'>
+                  <a class='search-nav_link search-nav_link__muted' href='search_services.html'>
                     <span>Услуги</span>
                   </a>
                 </li>
@@ -142,52 +141,7 @@
               </div><div class='grid_i grid_i__desktop-grid-1-3 grid_i__tablet-grid-1-2 grid_i__phone-grid-1-1 js-feed-item'>
                 <article class='news-item'>
                   <a href='news_show.html'>
-                    <img alt='Новая техника для земляных работ: производительная, экономичная, &amp;laquo;зеленая&amp;raquo;' class='va-t' src='assets/images/news_photo_1.jpg' width='100%'>
-                  </a>
-                  <header class='news-item_header'>
-                    <p class='mb-1'>
-                      <a href='news_show.html'>Новая техника для земляных работ: производительная, экономичная, &laquo;зеленая&raquo;</a>
-                      <i class='tx-muted'>14 сентября 2014</i>
-                    </p>
-                    <p class='news-item_source'>
-                      <a href='#'><span>Lenta.ru</span><img alt='Lenta.ru' height='16' src='assets/images/news_source.png' width='16'>
-                      </a>
-                    </p>
-                  </header>
-                  <div class='news-item_body'>
-                    <img alt='Александр Звягинцев' class='news-item_author' height='43' src='assets/images/news_author_1.jpg' width='43'>
-                    <p class='tx-muted mb-1'>Александр Звягинцев</p>
-                    <p class='mb-1'>На&nbsp;мой взгляд, датамайнинг или умный анализ данных будет играть роль &laquo;колеса&raquo; в&nbsp;развитии человечества. Он&nbsp;позволит делать...</p>
-                    <p>
-                      <a href='#'>Подробнее</a>
-                    </p>
-                  </div>
-                </article>
-              </div><div class='grid_i grid_i__desktop-grid-1-3 grid_i__tablet-grid-1-2 grid_i__phone-grid-1-1 js-feed-item'>
-                <article class='news-item'>
-                  <header class='news-item_header'>
-                    <p class='mb-1'>
-                      <a href='news_show.html'>Новая техника для земляных работ: производительная, экономичная, &laquo;зеленая&raquo;</a>
-                      <i class='tx-muted'>14 сентября 2014</i>
-                    </p>
-                    <p class='news-item_source'>
-                      <a href='#'><span>Lenta.ru</span><img alt='Lenta.ru' height='16' src='assets/images/news_source.png' width='16'>
-                      </a>
-                    </p>
-                  </header>
-                  <div class='news-item_body'>
-                    <img alt='Александр Звягинцев' class='news-item_author' height='43' src='assets/images/news_author_1.jpg' width='43'>
-                    <p class='tx-muted mb-1'>Александр Звягинцев</p>
-                    <p class='mb-1'>На&nbsp;мой взгляд, датамайнинг или умный анализ данных будет играть роль &laquo;колеса&raquo; в&nbsp;развитии человечества. Он&nbsp;позволит делать...</p>
-                    <p>
-                      <a href='#'>Подробнее</a>
-                    </p>
-                  </div>
-                </article>
-              </div><div class='grid_i grid_i__desktop-grid-1-3 grid_i__tablet-grid-1-2 grid_i__phone-grid-1-1 js-feed-item'>
-                <article class='news-item'>
-                  <a href='news_show.html'>
-                    <img alt='Новая техника для земляных работ: производительная, экономичная, &amp;laquo;зеленая&amp;raquo;' class='va-t' src='assets/images/news_photo_1.jpg' width='100%'>
+                    <img alt='Новая техника для земляных работ: производительная, экономичная, &amp;laquo;зеленая&amp;raquo;' class='va-t' src='assets/images/news_photo_2.jpg' width='100%'>
                   </a>
                   <header class='news-item_header'>
                     <p class='mb-1'>
@@ -253,6 +207,51 @@
                     </p>
                   </div>
                 </article>
+              </div><div class='grid_i grid_i__desktop-grid-1-3 grid_i__tablet-grid-1-2 grid_i__phone-grid-1-1 js-feed-item'>
+                <article class='news-item'>
+                  <header class='news-item_header'>
+                    <p class='mb-1'>
+                      <a href='news_show.html'>Новая техника для земляных работ: производительная, экономичная, &laquo;зеленая&raquo;</a>
+                      <i class='tx-muted'>14 сентября 2014</i>
+                    </p>
+                    <p class='news-item_source'>
+                      <a href='#'><span>Lenta.ru</span><img alt='Lenta.ru' height='16' src='assets/images/news_source.png' width='16'>
+                      </a>
+                    </p>
+                  </header>
+                  <div class='news-item_body'>
+                    <img alt='Александр Звягинцев' class='news-item_author' height='43' src='assets/images/news_author_1.jpg' width='43'>
+                    <p class='tx-muted mb-1'>Александр Звягинцев</p>
+                    <p class='mb-1'>На&nbsp;мой взгляд, датамайнинг или умный анализ данных будет играть роль &laquo;колеса&raquo; в&nbsp;развитии человечества. Он&nbsp;позволит делать...</p>
+                    <p>
+                      <a href='#'>Подробнее</a>
+                    </p>
+                  </div>
+                </article>
+              </div><div class='grid_i grid_i__desktop-grid-1-3 grid_i__tablet-grid-1-2 grid_i__phone-grid-1-1 js-feed-item'>
+                <article class='news-item'>
+                  <a href='news_show.html'>
+                    <img alt='Новая техника для земляных работ: производительная, экономичная, &amp;laquo;зеленая&amp;raquo;' class='va-t' src='assets/images/news_photo_1.jpg' width='100%'>
+                  </a>
+                  <header class='news-item_header'>
+                    <p class='mb-1'>
+                      <a href='news_show.html'>Новая техника для земляных работ: производительная, экономичная, &laquo;зеленая&raquo;</a>
+                      <i class='tx-muted'>14 сентября 2014</i>
+                    </p>
+                    <p class='news-item_source'>
+                      <a href='#'><span>Lenta.ru</span><img alt='Lenta.ru' height='16' src='assets/images/news_source.png' width='16'>
+                      </a>
+                    </p>
+                  </header>
+                  <div class='news-item_body'>
+                    <img alt='Александр Звягинцев' class='news-item_author' height='43' src='assets/images/news_author_1.jpg' width='43'>
+                    <p class='tx-muted mb-1'>Александр Звягинцев</p>
+                    <p class='mb-1'>На&nbsp;мой взгляд, датамайнинг или умный анализ данных будет играть роль &laquo;колеса&raquo; в&nbsp;развитии человечества. Он&nbsp;позволит делать...</p>
+                    <p>
+                      <a href='#'>Подробнее</a>
+                    </p>
+                  </div>
+                </article>
               </div></div>
           </div>
         </div>
@@ -265,10 +264,10 @@
               <p class='footer_copy'>&copy;&nbsp;2014 &laquo;ПроДом&raquo;</p>
             </div><div class='grid_i grid_i__middle grid_i__desktop-grid-10-12'>
               <div class='tx-right'>
-                <ul class='footer_nav'><li class='footer_nav_i'>
-                    <a class='footer_nav_i_a' href='#'>Карта сайта</a>
-                  </li><li class='footer_nav_i'>
-                    <a class='footer_nav_i_a' href='#'>Обратный звонок</a>
+                <ul class='footer_nav'><li class='footer_item'>
+                    <a class='footer_link' href='#'>Карта сайта</a>
+                  </li><li class='footer_item'>
+                    <a class='footer_link' href='#'>Обратный звонок</a>
                   </li>
                 </ul><span class='footer_phone'>+7 (499) 705 70 08</span><a href='#'>
                   <img class='footer_logo' height='12' src='assets/images/db.png' width='20'>

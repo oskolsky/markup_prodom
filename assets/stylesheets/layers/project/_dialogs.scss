@@ -1,9 +1,11 @@
 .dialog {
-    @include prefixes(box-sizing, border-box);
-    width: 43rem;
-    background-color: #fff;
+  width: 43rem;
+  padding: 3rem 4rem 5rem;
+  border-radius: .1rem;
+  background-color: #fff;
+  @include prefixes(box-sizing, border-box);
 
-    &__center {
-        text-align: center;
-    }
+  &_title {
+    text-align: center;
+  }
 }

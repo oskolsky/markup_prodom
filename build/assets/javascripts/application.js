@@ -10,7 +10,7 @@ $.arcticmodal('setDefault', {
   overlay: {
     css: {
       backgroundColor: '#000',
-      opacity: 0.66
+      opacity: 0.5
     }
   },
   openEffect: {
@@ -130,16 +130,6 @@ $(function() {
   //
   //****************************************************************************************************
   doubleHover('.double-hover', 'hover');
-
-
-
-  //****************************************************************************************************
-  //
-  // .. FORMS
-  // .. $('#checkbox').customForm() to init single element; $('body').customForm() to init all elements
-  //
-  //****************************************************************************************************
-  $('.js-form').customForm();
 
 
 

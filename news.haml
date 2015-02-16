@@ -42,12 +42,12 @@
                         %a{href: 'news_show.html'} Новая техника для земляных работ: производительная, экономичная, &laquo;зеленая&raquo;
                         %i.tx-muted 14 сентября 2014
                   .load-more.js-news-load
-                    %a.load-more_a{href: '#'} Показать ещё
+                    %a.load-more_link{href: '#'} Показать ещё
 
           %ul.news-nav
-            %li.news-nav_i>
-              %a.news-nav_i_a.news-nav_i_a__prev{href: "#"} Август  2014
-            %li.news-nav_i
-              %a.news-nav_i_a.news-nav_i_a__next{href: "#"} Октябрь 2014
+            %li.news-nav_item>
+              %a.news-nav_link.news-nav_link__prev{href: "#"} Август  2014
+            %li.news-nav_item
+              %a.news-nav_link.news-nav_link__next{href: "#"} Октябрь 2014
 
     = Haml::Engine.new(File.read('views/layouts/_footer.haml')).render

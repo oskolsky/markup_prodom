@@ -35,7 +35,6 @@
       "assets/javascripts/config.js",
       "assets/javascripts/jquery.extensions.js",
       "assets/javascripts/helpers.js",
-      "assets/javascripts/forms.js",
       "assets/javascripts/feed.js",
       "assets/javascripts/application.js",
       "assets/javascripts/project.js"
