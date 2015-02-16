@@ -1,0 +1,9 @@
+.dialog {
+    @include prefixes(box-sizing, border-box);
+    width: 43rem;
+    background-color: #fff;
+
+    &__center {
+        text-align: center;
+    }
+}

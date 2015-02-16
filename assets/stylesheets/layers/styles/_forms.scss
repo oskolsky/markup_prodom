@@ -98,7 +98,7 @@ input {
   height: 3rem;
   border: 1px solid #ccc;
   border-radius: .3rem;
-  cursor: pointer; 
+  cursor: pointer;
   text-align: center;
   @include linear-gradient(vertical, #eee, #ddd);
   &:not([disabled]):active {@include linear-gradient(vertical, #ddd, #eee);}

@@ -40,7 +40,6 @@
 @import "layers/base/_indents";
 @import "layers/base/_forms";
 @import "layers/base/_alerts";
-@import "layers/base/_dialogs";
 @import "layers/base/_popups";
 @import "layers/base/_rub";
 
@@ -56,7 +55,6 @@
 @import "layers/styles/_forms";
 @import "layers/styles/_content";
 @import "layers/styles/_alerts";
-@import "layers/styles/_dialogs";
 @import "layers/styles/_popups";
 
 
@@ -67,6 +65,7 @@
 //
 //****************************************************************************************************
 @import "layers/project/_icons";
+@import "layers/project/_dialogs";
 @import "layers/project/_project";
 @import "layers/project/_shame";
 
