@@ -5,7 +5,7 @@
     = Haml::Engine.new(File.read('views/layouts/_head.haml')).render
     :css
       .demo{margin-left:6rem}.demo li:not(:last-child){margin-bottom:1rem}.demo ol{counter-reset:list}.demo ol li{position:relative}.demo ol li::before{counter-increment:list;content:counter(list)'.';position:absolute;top:0;right:100%;margin-right:.5rem;color:#ccc}
-  
+
   %body#page.page
     = Haml::Engine.new(File.read('views/common/_alerts.haml')).render
 
@@ -18,33 +18,58 @@
                 %h1
                   %a{href: 'index.html'} Продом
 
-              %nav.demo
-                %ol
-                  %li
-                    %a{href: 'index.html'} Главная
-                  %li
-                    %a{href: 'catalog.html'} Предложения
-                  %li
-                    %a.tx-muted{href: 'catalog_show.html'} Предложение
-                  %li
-                    %a{href: 'favorites.html'} Избранное
-                  %li
-                    %a{href: 'search_params.html'} Поиск - параметры
-                  %li
-                    %a{href: 'search_catalog.html'} Поиск - предложения
-                  %li
-                    %a{href: 'search_news.html'} Поиск - новости
-                  %li
-                    %a{href: 'search_services.html'} Поиск - услуги
-                  %li
-                    %a{href: 'news.html'} Новости
-                  %li
-                    %a{href: 'news_show.html'} Новость
-                  %li
-                    %a{href: 'about.html'} О компании
-                  %li
-                    %a{href: 'services.html'} Услуги
-                  %li
-                    %a.tx-muted{href: 'contacts.html'} Контакты
-                  %li
-                    %a.tx-muted{href: '404.html'} 404
+              .grid
+                .grid_i.grid_i__desktop-grid-1-2.grid_i__tablet-grid-1-2.grid_i__phone-grid-1-2>
+                  %nav.demo
+                    %ol
+                      %li
+                        %a{href: 'index.html'} Главная
+                      %li
+                        %a{href: 'catalog.html'} Предложения
+                      %li
+                        %a{href: 'catalog_show.html'} Предложение
+                      %li
+                        %a{href: 'favorites.html'} Избранное
+                      %li
+                        %a{href: 'search_params.html'} Поиск - параметры
+                      %li
+                        %a{href: 'search_catalog.html'} Поиск - предложения
+                      %li
+                        %a{href: 'search_news.html'} Поиск - новости
+                      %li
+                        %a{href: 'search_services.html'} Поиск - услуги
+                      %li
+                        %a{href: 'news.html'} Новости
+                      %li
+                        %a{href: 'news_show.html'} Новость
+                      %li
+                        %a{href: 'about.html'} О компании
+                      %li
+                        %a{href: 'services.html'} Услуги
+                      %li
+                        %a{href: 'contacts.html'} Контакты
+                      %li
+                        %a{href: '404.html'} 404
+
+                .grid_i.grid_i__desktop-grid-1-2.grid_i__tablet-grid-1-2.grid_i__phone-grid-1-2>
+                  %nav.demo
+                    %ol
+                      %li
+                        %a.a-pseudo{href: '#', data: {dialog: 'open', url: 'data/dialog/callback.html'}}
+                          %span.a-pseudo_inner Обратный звонок
+                      %li
+                        %a.a-pseudo{href: '#', data: {dialog: 'open', url: 'data/dialog/application.html'}}
+                          %span.a-pseudo_inner Заявка
+                      %li
+                        %a.a-pseudo{href: '#', data: {dialog: 'open', url: 'data/dialog/message_1.html'}}
+                          %span.a-pseudo_inner Сообщение #1
+                      %li
+                        %a.a-pseudo{href: '#', data: {dialog: 'open', url: 'data/dialog/message_2.html'}}
+                          %span.a-pseudo_inner Сообщение #2
+                      %li
+                        %a.a-pseudo{href: '#', data: {dialog: 'open', url: 'data/dialog/subscription_email.html'}}
+                          %span.a-pseudo_inner Подписка email
+                      %li
+                        %a.a-pseudo{href: '#', data: {dialog: 'open', url: 'data/dialog/subscription_sms.html'}}
+                          %span.a-pseudo_inner Подписка sms
+
