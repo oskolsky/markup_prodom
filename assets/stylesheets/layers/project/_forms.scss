@@ -1,0 +1,12 @@
+.form {
+
+  &_row:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &_text {
+    width: 100%;
+    height: 4.3rem;
+    border: .1rem solid #e6e6e6;
+  }
+}

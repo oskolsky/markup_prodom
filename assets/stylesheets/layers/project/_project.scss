@@ -492,7 +492,7 @@
       bottom: 0;
       left: 3rem;
       height: 1px;
-      content: '';
+      content: "";
       background-color: #d9d9d9;
     }
     
@@ -629,8 +629,8 @@
       top: -1px;
       width: 15px;
       height: 39px;
-      content: '';
-      background-image: image-url('news-nav.png');
+      content: "";
+      background-image: image-url("news-nav.png");
       background-repeat: no-repeat;
     }
   
@@ -758,7 +758,7 @@
     bottom: 0;
     width: 7rem;
     cursor: pointer;
-    background-image: image-url('search.png');
+    background-image: image-url("search.png");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -890,7 +890,7 @@
       right: -1.5rem;
       width: .1rem;
       height: 1.3rem;
-      content: '';
+      content: "";
       background-color: #e0e0e0;
     }
   }
@@ -1057,7 +1057,7 @@
         bottom: -1px;
         left: 0;
         height: 1px;
-        content: '';
+        content: "";
         background-color: $base-color;
       }
     }
