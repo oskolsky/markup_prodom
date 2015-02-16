@@ -6,6 +6,7 @@
   @include prefixes(box-sizing, border-box);
 
   &_title {
+    margin-bottom: 3rem;
     text-align: center;
   }
 }

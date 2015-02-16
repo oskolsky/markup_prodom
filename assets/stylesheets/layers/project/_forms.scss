@@ -1,12 +1,50 @@
 .form {
 
-  &_row:not(:last-child) {
-    margin-bottom: 2rem;
+  &_row {
+    
+    &:not(:last-child) {
+      margin-bottom: .5rem;
+    }
+
+    &__submit {
+      margin-top: 4rem;
+      text-align: center;
+    }
+  }
+
+  &_label {
+    font-family: $font-opensans;
+    font-size: 1.4rem;
+    line-height: 3.4rem;
+    color: $voice-color;
   }
 
   &_text {
+    @include prefixes(box-sizing, border-box);
+    font-family: $font-opensans;
+    font-size: 1.4rem;
     width: 100%;
     height: 4.3rem;
+    padding: 0 1rem;
     border: .1rem solid #e6e6e6;
+    border-radius: .2rem;
+  }
+
+  &_btn {
+    @include prefixes(box-sizing, border-box);
+    font-family: $font-opensans;
+    font-size: 1rem;
+    font-weight: 600;
+    height: 3.7rem;
+    padding: 0 2.5rem;
+    letter-spacing: .75pt;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: .2rem;
+    background-color: $link-color;
+
+    &:hover {
+      background-color: #baae98;
+    }
   }
 }
