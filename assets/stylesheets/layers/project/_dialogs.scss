@@ -13,7 +13,7 @@
     text-align: center;
   }
 
-  &_title {
+  &_header {
     text-align: center;
 
     .dialog__form & {
@@ -21,7 +21,13 @@
     }
 
     .dialog__message & {
-      margin-bottom: 11.5rem; 
+      margin-bottom: 10rem; 
     }
+  }
+
+  &_text {
+    font-family: $font-opensans;
+    font-size: 1.4rem;
+    color: $voice-color;
   }
 }

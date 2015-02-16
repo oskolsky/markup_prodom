@@ -1,5 +1,6 @@
 .dialog.dialog__form
-  %h4.dialog_title Обратный звонок
+  .dialog_header
+    %h4 Обратный звонок
   %form.form
     .form_row
       %lable.form_label Как вас зовут?
@@ -8,4 +9,4 @@
       %lable.form_label Ваш телефон
       %input.form_text{type: "text"}
     .form_row.form_row__submit
-      %input.form_btn{type: "submit"}
+      %input.form_btn{type: "submit", value: "Отправить"}

@@ -3759,12 +3759,16 @@ a, .a-link_inner {
   .dialog__message {
     padding: 9rem 4rem 3rem;
     text-align: center; }
-  .dialog_title {
+  .dialog_header {
     text-align: center; }
-    .dialog__form .dialog_title {
+    .dialog__form .dialog_header {
       margin-bottom: 3rem; }
-    .dialog__message .dialog_title {
-      margin-bottom: 11.5rem; }
+    .dialog__message .dialog_header {
+      margin-bottom: 10rem; }
+  .dialog_text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4rem;
+    color: #808080; }
 
 .form_row:not(:last-child) {
   margin-bottom: .5rem; }
