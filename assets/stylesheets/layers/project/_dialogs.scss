@@ -1,12 +1,27 @@
 .dialog {
+  @include prefixes(box-sizing, border-box);
   width: 43rem;
-  padding: 3rem 4rem 5rem;
   border-radius: .1rem;
   background-color: #fff;
-  @include prefixes(box-sizing, border-box);
+
+  &__form {  
+    padding: 3rem 4rem 5rem;
+  }
+
+  &__message {
+    padding: 9rem 4rem 3rem;
+    text-align: center;
+  }
 
   &_title {
-    margin-bottom: 3rem;
     text-align: center;
+
+    .dialog__form & {
+      margin-bottom: 3rem;
+    }
+
+    .dialog__message & {
+      margin-bottom: 11.5rem; 
+    }
   }
 }

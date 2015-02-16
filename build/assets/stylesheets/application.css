@@ -3746,18 +3746,25 @@ a, .a-link_inner {
     background-color: #eee; }
 
 .dialog {
-  width: 43rem;
-  padding: 3rem 4rem 5rem;
-  border-radius: .1rem;
-  background-color: #fff;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
-  box-sizing: border-box; }
-  .dialog_title {
-    margin-bottom: 3rem;
+  box-sizing: border-box;
+  width: 43rem;
+  border-radius: .1rem;
+  background-color: #fff; }
+  .dialog__form {
+    padding: 3rem 4rem 5rem; }
+  .dialog__message {
+    padding: 9rem 4rem 3rem;
     text-align: center; }
+  .dialog_title {
+    text-align: center; }
+    .dialog__form .dialog_title {
+      margin-bottom: 3rem; }
+    .dialog__message .dialog_title {
+      margin-bottom: 11.5rem; }
 
 .form_row:not(:last-child) {
   margin-bottom: .5rem; }
@@ -3781,7 +3788,8 @@ a, .a-link_inner {
   height: 4.3rem;
   padding: 0 1rem;
   border: .1rem solid #e6e6e6;
-  border-radius: .2rem; }
+  border-radius: .2rem;
+  background-color: #f7f7f7; }
 .form_btn {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
